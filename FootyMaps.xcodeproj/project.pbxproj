@@ -1,0 +1,497 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		46F9D0F25941070D199F9717 /* Pods_FootyMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F135A5477F3FF4DEDC29A734 /* Pods_FootyMaps.framework */; };
+		6792A1751E948A5E0076B116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A1741E948A5E0076B116 /* AppDelegate.swift */; };
+		6792A1771E948A5E0076B116 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A1761E948A5E0076B116 /* SignInVC.swift */; };
+		6792A17A1E948A5E0076B116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6792A1781E948A5E0076B116 /* Main.storyboard */; };
+		6792A17C1E948A5E0076B116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6792A17B1E948A5E0076B116 /* Assets.xcassets */; };
+		6792A17F1E948A5E0076B116 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6792A17D1E948A5E0076B116 /* LaunchScreen.storyboard */; };
+		6792A18E1E9490E90076B116 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A18D1E9490E90076B116 /* Constants.swift */; };
+		6792A1911E94912B0076B116 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A1901E94912B0076B116 /* CustomTabBarController.swift */; };
+		6792A1931E9491430076B116 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A1921E9491430076B116 /* CustomView.swift */; };
+		6792A1951E9491620076B116 /* FancyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A1941E9491620076B116 /* FancyTextField.swift */; };
+		6792A1971E94917A0076B116 /* FancyTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A1961E94917A0076B116 /* FancyTextView.swift */; };
+		6792A1991E9491960076B116 /* CustomCircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A1981E9491960076B116 /* CustomCircleImageView.swift */; };
+		6792A19B1E9491A70076B116 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A19A1E9491A70076B116 /* DataService.swift */; };
+		6792A19E1E9491E20076B116 /* MapListViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A19D1E9491E20076B116 /* MapListViewVC.swift */; };
+		6792A1A01E9493990076B116 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6792A19F1E9493990076B116 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6792A1711E948A5E0076B116 /* FootyMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootyMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6792A1741E948A5E0076B116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6792A1761E948A5E0076B116 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		6792A1791E948A5E0076B116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6792A17B1E948A5E0076B116 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6792A17E1E948A5E0076B116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6792A1801E948A5E0076B116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6792A18D1E9490E90076B116 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6792A1901E94912B0076B116 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		6792A1921E9491430076B116 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		6792A1941E9491620076B116 /* FancyTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyTextField.swift; sourceTree = "<group>"; };
+		6792A1961E94917A0076B116 /* FancyTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyTextView.swift; sourceTree = "<group>"; };
+		6792A1981E9491960076B116 /* CustomCircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCircleImageView.swift; sourceTree = "<group>"; };
+		6792A19A1E9491A70076B116 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		6792A19D1E9491E20076B116 /* MapListViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapListViewVC.swift; sourceTree = "<group>"; };
+		6792A19F1E9493990076B116 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7BB16D378332B725A373A911 /* Pods-FootyMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootyMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootyMaps/Pods-FootyMaps.debug.xcconfig"; sourceTree = "<group>"; };
+		A3FADAA6EEA5478003029191 /* Pods-FootyMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootyMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-FootyMaps/Pods-FootyMaps.release.xcconfig"; sourceTree = "<group>"; };
+		F135A5477F3FF4DEDC29A734 /* Pods_FootyMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootyMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6792A16E1E948A5E0076B116 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46F9D0F25941070D199F9717 /* Pods_FootyMaps.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		368BBFADB25AF3F721773AD1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F135A5477F3FF4DEDC29A734 /* Pods_FootyMaps.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6792A1681E948A5E0076B116 = {
+			isa = PBXGroup;
+			children = (
+				6792A1731E948A5E0076B116 /* FootyMaps */,
+				6792A1721E948A5E0076B116 /* Products */,
+				FAEF7E596988D401E8AEDC5B /* Pods */,
+				368BBFADB25AF3F721773AD1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6792A1721E948A5E0076B116 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6792A1711E948A5E0076B116 /* FootyMaps.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6792A1731E948A5E0076B116 /* FootyMaps */ = {
+			isa = PBXGroup;
+			children = (
+				6792A18C1E948AD20076B116 /* Services */,
+				6792A18B1E948ACC0076B116 /* Model */,
+				6792A18A1E948AC60076B116 /* View */,
+				6792A1891E948AAE0076B116 /* Controller */,
+				6792A1881E948AA70076B116 /* Utils */,
+				6792A1871E948AA00076B116 /* Layouts */,
+				6792A1861E948A920076B116 /* Supporting Files */,
+			);
+			path = FootyMaps;
+			sourceTree = "<group>";
+		};
+		6792A1861E948A920076B116 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6792A19F1E9493990076B116 /* GoogleService-Info.plist */,
+				6792A1801E948A5E0076B116 /* Info.plist */,
+				6792A1741E948A5E0076B116 /* AppDelegate.swift */,
+				6792A17B1E948A5E0076B116 /* Assets.xcassets */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6792A1871E948AA00076B116 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				6792A1781E948A5E0076B116 /* Main.storyboard */,
+				6792A17D1E948A5E0076B116 /* LaunchScreen.storyboard */,
+			);
+			name = Layouts;
+			sourceTree = "<group>";
+		};
+		6792A1881E948AA70076B116 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6792A18D1E9490E90076B116 /* Constants.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		6792A1891E948AAE0076B116 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6792A19C1E9491B10076B116 /* TabVCs */,
+				6792A1761E948A5E0076B116 /* SignInVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		6792A18A1E948AC60076B116 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6792A18F1E9491040076B116 /* Customizations */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6792A18B1E948ACC0076B116 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6792A18C1E948AD20076B116 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6792A19A1E9491A70076B116 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		6792A18F1E9491040076B116 /* Customizations */ = {
+			isa = PBXGroup;
+			children = (
+				6792A1901E94912B0076B116 /* CustomTabBarController.swift */,
+				6792A1921E9491430076B116 /* CustomView.swift */,
+				6792A1941E9491620076B116 /* FancyTextField.swift */,
+				6792A1961E94917A0076B116 /* FancyTextView.swift */,
+				6792A1981E9491960076B116 /* CustomCircleImageView.swift */,
+			);
+			name = Customizations;
+			sourceTree = "<group>";
+		};
+		6792A19C1E9491B10076B116 /* TabVCs */ = {
+			isa = PBXGroup;
+			children = (
+				6792A19D1E9491E20076B116 /* MapListViewVC.swift */,
+			);
+			name = TabVCs;
+			sourceTree = "<group>";
+		};
+		FAEF7E596988D401E8AEDC5B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7BB16D378332B725A373A911 /* Pods-FootyMaps.debug.xcconfig */,
+				A3FADAA6EEA5478003029191 /* Pods-FootyMaps.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6792A1701E948A5E0076B116 /* FootyMaps */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6792A1831E948A5E0076B116 /* Build configuration list for PBXNativeTarget "FootyMaps" */;
+			buildPhases = (
+				FFF4D489DE29B41F90A00F4A /* [CP] Check Pods Manifest.lock */,
+				6792A16D1E948A5E0076B116 /* Sources */,
+				6792A16E1E948A5E0076B116 /* Frameworks */,
+				6792A16F1E948A5E0076B116 /* Resources */,
+				552B10C434B9CC371C3549D4 /* [CP] Embed Pods Frameworks */,
+				5B47A83AB7D619846D43CF84 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FootyMaps;
+			productName = FootyMaps;
+			productReference = 6792A1711E948A5E0076B116 /* FootyMaps.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6792A1691E948A5E0076B116 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Ben Makusha";
+				TargetAttributes = {
+					6792A1701E948A5E0076B116 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = X8E58H8HK5;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 6792A16C1E948A5E0076B116 /* Build configuration list for PBXProject "FootyMaps" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6792A1681E948A5E0076B116;
+			productRefGroup = 6792A1721E948A5E0076B116 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6792A1701E948A5E0076B116 /* FootyMaps */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6792A16F1E948A5E0076B116 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6792A17F1E948A5E0076B116 /* LaunchScreen.storyboard in Resources */,
+				6792A1A01E9493990076B116 /* GoogleService-Info.plist in Resources */,
+				6792A17C1E948A5E0076B116 /* Assets.xcassets in Resources */,
+				6792A17A1E948A5E0076B116 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		552B10C434B9CC371C3549D4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FootyMaps/Pods-FootyMaps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B47A83AB7D619846D43CF84 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FootyMaps/Pods-FootyMaps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFF4D489DE29B41F90A00F4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6792A16D1E948A5E0076B116 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6792A19B1E9491A70076B116 /* DataService.swift in Sources */,
+				6792A1931E9491430076B116 /* CustomView.swift in Sources */,
+				6792A1991E9491960076B116 /* CustomCircleImageView.swift in Sources */,
+				6792A1771E948A5E0076B116 /* SignInVC.swift in Sources */,
+				6792A19E1E9491E20076B116 /* MapListViewVC.swift in Sources */,
+				6792A1971E94917A0076B116 /* FancyTextView.swift in Sources */,
+				6792A1751E948A5E0076B116 /* AppDelegate.swift in Sources */,
+				6792A1951E9491620076B116 /* FancyTextField.swift in Sources */,
+				6792A1911E94912B0076B116 /* CustomTabBarController.swift in Sources */,
+				6792A18E1E9490E90076B116 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6792A1781E948A5E0076B116 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6792A1791E948A5E0076B116 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6792A17D1E948A5E0076B116 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6792A17E1E948A5E0076B116 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6792A1811E948A5E0076B116 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6792A1821E948A5E0076B116 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6792A1841E948A5E0076B116 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BB16D378332B725A373A911 /* Pods-FootyMaps.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X8E58H8HK5;
+				INFOPLIST_FILE = FootyMaps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.benmakusha.FootyMaps;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		6792A1851E948A5E0076B116 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3FADAA6EEA5478003029191 /* Pods-FootyMaps.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X8E58H8HK5;
+				INFOPLIST_FILE = FootyMaps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.benmakusha.FootyMaps;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6792A16C1E948A5E0076B116 /* Build configuration list for PBXProject "FootyMaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6792A1811E948A5E0076B116 /* Debug */,
+				6792A1821E948A5E0076B116 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6792A1831E948A5E0076B116 /* Build configuration list for PBXNativeTarget "FootyMaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6792A1841E948A5E0076B116 /* Debug */,
+				6792A1851E948A5E0076B116 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6792A1691E948A5E0076B116 /* Project object */;
+}

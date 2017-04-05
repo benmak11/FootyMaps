@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SignInVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="SignInVC" customClass="SignInVC" customModule="FootyMaps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GMX-Fd-V1T">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhs-OU-s9u" customClass="CustomView" customModule="FootyMaps" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="592" width="375" height="75"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you haven't signed in an account will be created automatically for you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWj-OR-C87">
+                                        <rect key="frame" x="8" y="15" width="360" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="0AT-Dr-Efj"/>
+                                            <constraint firstAttribute="width" constant="360" id="Skf-Z8-Nrs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.15294117647058825" green="0.66274509803921566" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="YeS-QO-cDN"/>
+                                    <constraint firstItem="yWj-OR-C87" firstAttribute="centerY" secondItem="bhs-OU-s9u" secondAttribute="centerY" id="aDi-47-wMw"/>
+                                    <constraint firstAttribute="width" constant="375" id="qdh-l4-qNF"/>
+                                    <constraint firstItem="yWj-OR-C87" firstAttribute="centerX" secondItem="bhs-OU-s9u" secondAttribute="centerX" id="xh4-W3-udC"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Sign In With" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYG-s7-nOw">
+                                <rect key="frame" x="90" y="346" width="195" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="195" id="SB1-5h-b6X"/>
+                                    <constraint firstAttribute="height" constant="30" id="w3D-zi-TXP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ze6-6I-ncM">
+                                <rect key="frame" x="127" y="406" width="121" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="G5r-f4-m85"/>
+                                    <constraint firstAttribute="height" constant="30" id="ly1-RF-fnD"/>
+                                </constraints>
+                                <state key="normal" title="Facebook Sign In"/>
+                                <connections>
+                                    <action selector="facebookBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Djv-Uf-O1b"/>
+                                    <segue destination="jXo-Ee-5CE" kind="show" identifier="goToMapView" id="Dca-ft-nLj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bhs-OU-s9u" firstAttribute="top" secondItem="Ze6-6I-ncM" secondAttribute="bottom" constant="156" id="1ha-ow-ZN0"/>
+                            <constraint firstItem="Ze6-6I-ncM" firstAttribute="top" secondItem="dYG-s7-nOw" secondAttribute="bottom" constant="30" id="2Ww-Tw-ba8"/>
+                            <constraint firstItem="dYG-s7-nOw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="326" id="33g-JD-fF4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dYG-s7-nOw" secondAttribute="trailing" constant="74" id="9RI-N1-7zJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ze6-6I-ncM" secondAttribute="trailing" constant="111" id="GVz-JW-sEI"/>
+                            <constraint firstItem="dYG-s7-nOw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="74" id="IQR-YT-PTR"/>
+                            <constraint firstItem="bhs-OU-s9u" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="STt-Yh-G0F"/>
+                            <constraint firstItem="Ze6-6I-ncM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="111" id="T7o-4s-JG6"/>
+                            <constraint firstAttribute="trailing" secondItem="GMX-Fd-V1T" secondAttribute="trailing" id="Tuo-2Y-ut1"/>
+                            <constraint firstItem="Ze6-6I-ncM" firstAttribute="top" secondItem="dYG-s7-nOw" secondAttribute="bottom" constant="30" id="XqU-kA-TdH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GMX-Fd-V1T" secondAttribute="bottom" id="YKl-nd-Bww"/>
+                            <constraint firstAttribute="bottom" secondItem="bhs-OU-s9u" secondAttribute="bottom" id="idH-MR-F3N"/>
+                            <constraint firstAttribute="trailing" secondItem="bhs-OU-s9u" secondAttribute="trailing" id="mic-Mx-Vqj"/>
+                            <constraint firstItem="GMX-Fd-V1T" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="o6R-UR-ueX"/>
+                            <constraint firstItem="GMX-Fd-V1T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ouE-fp-dba"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+        <!--Friends-->
+        <scene sceneID="Pib-GK-Etc">
+            <objects>
+                <viewController id="SnL-6C-XmQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a4U-y7-ww1"/>
+                        <viewControllerLayoutGuide type="bottom" id="VeH-n4-kyI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="haU-bg-D8S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Friends" id="GwT-jD-dim"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3NQ-Zn-neS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1743" y="365"/>
+        </scene>
+        <!--MapView-->
+        <scene sceneID="pDB-GG-gPd">
+            <objects>
+                <viewController id="28h-ws-I0N" customClass="MapListViewVC" customModule="FootyMaps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fEy-ju-7V9"/>
+                        <viewControllerLayoutGuide type="bottom" id="tSI-Px-K6R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9ah-eu-ecg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j5B-G1-Ak7" customClass="CustomView" customModule="FootyMaps" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                                <color key="backgroundColor" red="0.1529411765" green="0.66274509800000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="P4Q-3P-Sdi"/>
+                                </constraints>
+                            </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="i7Q-kK-jZc">
+                                <rect key="frame" x="0.0" y="75" width="375" height="543"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j5B-G1-Ak7" firstAttribute="leading" secondItem="9ah-eu-ecg" secondAttribute="leading" id="6oC-FV-bqP"/>
+                            <constraint firstAttribute="trailing" secondItem="i7Q-kK-jZc" secondAttribute="trailing" id="QWF-Mj-lRI"/>
+                            <constraint firstItem="tSI-Px-K6R" firstAttribute="top" secondItem="i7Q-kK-jZc" secondAttribute="bottom" id="bxl-m4-IMH"/>
+                            <constraint firstItem="i7Q-kK-jZc" firstAttribute="top" secondItem="j5B-G1-Ak7" secondAttribute="bottom" id="d9Q-Sl-jdo"/>
+                            <constraint firstItem="j5B-G1-Ak7" firstAttribute="top" secondItem="9ah-eu-ecg" secondAttribute="top" id="rac-Tx-Yj1"/>
+                            <constraint firstItem="i7Q-kK-jZc" firstAttribute="leading" secondItem="9ah-eu-ecg" secondAttribute="leading" id="xdw-wo-RM6"/>
+                            <constraint firstAttribute="trailing" secondItem="j5B-G1-Ak7" secondAttribute="trailing" id="zob-HP-dbz"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="MapView" id="EwD-ap-EYT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EhF-Ig-Uxa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1741.5999999999999" y="-290.10494752623691"/>
+        </scene>
+        <!--Custom Tab Bar Controller-->
+        <scene sceneID="oJz-ks-HCA">
+            <objects>
+                <tabBarController id="jXo-Ee-5CE" customClass="CustomTabBarController" customModule="FootyMaps" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Ybl-1e-qsf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="28h-ws-I0N" kind="relationship" relationship="viewControllers" id="L3A-Pu-DiT"/>
+                        <segue destination="SnL-6C-XmQ" kind="relationship" relationship="viewControllers" id="VdZ-wv-7Ks"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6o9-oW-OsF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791" y="38"/>
+        </scene>
+    </scenes>
+</document>
