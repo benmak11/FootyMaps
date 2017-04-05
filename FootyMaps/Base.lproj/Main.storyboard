@@ -216,6 +216,9 @@
                             <constraint firstItem="UeN-sU-n2N" firstAttribute="top" secondItem="jkI-dZ-RuH" secondAttribute="bottom" id="l2f-Wp-ZPn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="jkI-dZ-RuH" id="DCi-Fp-0kz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mir-AD-0SE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

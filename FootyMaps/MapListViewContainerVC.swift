@@ -12,6 +12,11 @@ import SwiftKeychainWrapper
 import FBSDKShareKit
 import XLPagerTabStrip
 
+/*
+** Used the https://github.com/xmartlabs/XLPagerTabStrip provided by https://xmartlabs.com/
+** to make the page tab strip
+*/
+
 class MapListViewContainerVC: ButtonBarPagerTabStripViewController {
     
     let purpleInspireColor = UIColor(red: 0.13, green: 0.03, blue: 0.25, alpha: 1.0)
@@ -62,10 +67,10 @@ class MapListViewContainerVC: ButtonBarPagerTabStripViewController {
             
             connection.add(graphRequest, completionHandler: { (connection, result, error) -> Void in
                 
-                let data = result as! [String: Any]
+                //let data = result as! [String: Any]
                 //USERNAME = (data["name"] as? String)!
                 //print("BEN: Username is --- \(USERNAME)")
-                let facebookId = data["id"] as? String
+                //let facebookId = data["id"] as? String
                 // Potential use for Profile pic showing
                 //let url = URL(string: "https://graph.facebook.com/"+facebookId!+"/picture?type=large&return_ssl_resources=1")
                 //self.profileImg.image = UIImage(data: NSData(contentsOf: url! as URL)! as Data)

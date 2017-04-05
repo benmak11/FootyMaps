@@ -15,6 +15,8 @@
 		672C4BFB1E94B8D400053D94 /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 672C4BF41E94B8D400053D94 /* GFGeoHash.m */; };
 		672C4BFC1E94B8D400053D94 /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 672C4BF61E94B8D400053D94 /* GFGeoHashQuery.m */; };
 		672C4BFD1E94B8D400053D94 /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 672C4BF81E94B8D400053D94 /* GFQuery.m */; };
+		672C4C021E94BBDD00053D94 /* FootyGameAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C4C011E94BBDD00053D94 /* FootyGameAnnotation.swift */; };
+		672C4C041E94C55D00053D94 /* FootyGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C4C031E94C55D00053D94 /* FootyGame.swift */; };
 		6792A1751E948A5E0076B116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A1741E948A5E0076B116 /* AppDelegate.swift */; };
 		6792A1771E948A5E0076B116 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A1761E948A5E0076B116 /* SignInVC.swift */; };
 		6792A17A1E948A5E0076B116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6792A1781E948A5E0076B116 /* Main.storyboard */; };
@@ -50,6 +52,8 @@
 		672C4BF71E94B8D400053D94 /* GFQuery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GFQuery+Private.h"; sourceTree = "<group>"; };
 		672C4BF81E94B8D400053D94 /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
 		672C4BFE1E94B90600053D94 /* FootyMaps-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FootyMaps-Bridging-Header.h"; sourceTree = "<group>"; };
+		672C4C011E94BBDD00053D94 /* FootyGameAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FootyGameAnnotation.swift; sourceTree = "<group>"; };
+		672C4C031E94C55D00053D94 /* FootyGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FootyGame.swift; sourceTree = "<group>"; };
 		6792A1711E948A5E0076B116 /* FootyMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootyMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6792A1741E948A5E0076B116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6792A1761E948A5E0076B116 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -211,6 +215,8 @@
 		6792A18B1E948ACC0076B116 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				672C4C011E94BBDD00053D94 /* FootyGameAnnotation.swift */,
+				672C4C031E94C55D00053D94 /* FootyGame.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -380,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6792A19B1E9491A70076B116 /* DataService.swift in Sources */,
+				672C4C041E94C55D00053D94 /* FootyGame.swift in Sources */,
 				6792A1931E9491430076B116 /* CustomView.swift in Sources */,
 				6792A1991E9491960076B116 /* CustomCircleImageView.swift in Sources */,
 				6792A1771E948A5E0076B116 /* SignInVC.swift in Sources */,
@@ -392,6 +399,7 @@
 				6726B94D1E94B43F0024F134 /* MapViewVC.swift in Sources */,
 				672C4BFD1E94B8D400053D94 /* GFQuery.m in Sources */,
 				6792A1911E94912B0076B116 /* CustomTabBarController.swift in Sources */,
+				672C4C021E94BBDD00053D94 /* FootyGameAnnotation.swift in Sources */,
 				672C4BF91E94B8D400053D94 /* GeoFire.m in Sources */,
 				672C4BFC1E94B8D400053D94 /* GFGeoHashQuery.m in Sources */,
 				672C4BFA1E94B8D400053D94 /* GFBase32Utils.m in Sources */,
