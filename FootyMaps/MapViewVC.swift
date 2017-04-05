@@ -8,8 +8,12 @@
 
 import UIKit
 import XLPagerTabStrip
+import MapKit
 
-class MapViewVC: UIViewController, IndicatorInfoProvider{
+class MapViewVC: UIViewController, IndicatorInfoProvider, MKMapViewDelegate, CLLocationManagerDelegate {
+    
+    // MARK: Geofire object
+    var geoFire: GeoFire!
 
     override func viewDidLoad() {
         super.viewDidLoad()
