@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		46F9D0F25941070D199F9717 /* Pods_FootyMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F135A5477F3FF4DEDC29A734 /* Pods_FootyMaps.framework */; };
+		6726B94D1E94B43F0024F134 /* MapViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6726B94C1E94B43F0024F134 /* MapViewVC.swift */; };
+		6726B94F1E94B44F0024F134 /* ListViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6726B94E1E94B44F0024F134 /* ListViewVC.swift */; };
 		6792A1751E948A5E0076B116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A1741E948A5E0076B116 /* AppDelegate.swift */; };
 		6792A1771E948A5E0076B116 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A1761E948A5E0076B116 /* SignInVC.swift */; };
 		6792A17A1E948A5E0076B116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6792A1781E948A5E0076B116 /* Main.storyboard */; };
@@ -20,11 +22,13 @@
 		6792A1971E94917A0076B116 /* FancyTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A1961E94917A0076B116 /* FancyTextView.swift */; };
 		6792A1991E9491960076B116 /* CustomCircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A1981E9491960076B116 /* CustomCircleImageView.swift */; };
 		6792A19B1E9491A70076B116 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A19A1E9491A70076B116 /* DataService.swift */; };
-		6792A19E1E9491E20076B116 /* MapListViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A19D1E9491E20076B116 /* MapListViewVC.swift */; };
+		6792A19E1E9491E20076B116 /* MapListViewContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A19D1E9491E20076B116 /* MapListViewContainerVC.swift */; };
 		6792A1A01E9493990076B116 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6792A19F1E9493990076B116 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6726B94C1E94B43F0024F134 /* MapViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewVC.swift; sourceTree = "<group>"; };
+		6726B94E1E94B44F0024F134 /* ListViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewVC.swift; sourceTree = "<group>"; };
 		6792A1711E948A5E0076B116 /* FootyMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootyMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6792A1741E948A5E0076B116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6792A1761E948A5E0076B116 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -39,7 +43,7 @@
 		6792A1961E94917A0076B116 /* FancyTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyTextView.swift; sourceTree = "<group>"; };
 		6792A1981E9491960076B116 /* CustomCircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCircleImageView.swift; sourceTree = "<group>"; };
 		6792A19A1E9491A70076B116 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
-		6792A19D1E9491E20076B116 /* MapListViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapListViewVC.swift; sourceTree = "<group>"; };
+		6792A19D1E9491E20076B116 /* MapListViewContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapListViewContainerVC.swift; sourceTree = "<group>"; };
 		6792A19F1E9493990076B116 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7BB16D378332B725A373A911 /* Pods-FootyMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootyMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootyMaps/Pods-FootyMaps.debug.xcconfig"; sourceTree = "<group>"; };
 		A3FADAA6EEA5478003029191 /* Pods-FootyMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootyMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-FootyMaps/Pods-FootyMaps.release.xcconfig"; sourceTree = "<group>"; };
@@ -173,7 +177,9 @@
 		6792A19C1E9491B10076B116 /* TabVCs */ = {
 			isa = PBXGroup;
 			children = (
-				6792A19D1E9491E20076B116 /* MapListViewVC.swift */,
+				6792A19D1E9491E20076B116 /* MapListViewContainerVC.swift */,
+				6726B94C1E94B43F0024F134 /* MapViewVC.swift */,
+				6726B94E1E94B44F0024F134 /* ListViewVC.swift */,
 			);
 			name = TabVCs;
 			sourceTree = "<group>";
@@ -316,10 +322,12 @@
 				6792A1931E9491430076B116 /* CustomView.swift in Sources */,
 				6792A1991E9491960076B116 /* CustomCircleImageView.swift in Sources */,
 				6792A1771E948A5E0076B116 /* SignInVC.swift in Sources */,
-				6792A19E1E9491E20076B116 /* MapListViewVC.swift in Sources */,
+				6792A19E1E9491E20076B116 /* MapListViewContainerVC.swift in Sources */,
 				6792A1971E94917A0076B116 /* FancyTextView.swift in Sources */,
 				6792A1751E948A5E0076B116 /* AppDelegate.swift in Sources */,
+				6726B94F1E94B44F0024F134 /* ListViewVC.swift in Sources */,
 				6792A1951E9491620076B116 /* FancyTextField.swift in Sources */,
+				6726B94D1E94B43F0024F134 /* MapViewVC.swift in Sources */,
 				6792A1911E94912B0076B116 /* CustomTabBarController.swift in Sources */,
 				6792A18E1E9490E90076B116 /* Constants.swift in Sources */,
 			);
