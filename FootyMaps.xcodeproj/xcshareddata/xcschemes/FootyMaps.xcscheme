@@ -140,20 +140,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5E8D97A1A59D0482A78AB67DE9C3301D"
-               BuildableName = "XLPagerTabStrip.bundle"
-               BlueprintName = "XLPagerTabStrip-XLPagerTabStrip"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "6792A1701E948A5E0076B116"
                BuildableName = "FootyMaps.app"
                BlueprintName = "FootyMaps"
