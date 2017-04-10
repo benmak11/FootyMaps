@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		46F9D0F25941070D199F9717 /* Pods_FootyMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F135A5477F3FF4DEDC29A734 /* Pods_FootyMaps.framework */; };
+		6726B94D1E94B43F0024F134 /* MapViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6726B94C1E94B43F0024F134 /* MapViewVC.swift */; };
+		6726B94F1E94B44F0024F134 /* ListViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6726B94E1E94B44F0024F134 /* ListViewVC.swift */; };
+		672C4BF91E94B8D400053D94 /* GeoFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 672C4BF01E94B8D400053D94 /* GeoFire.m */; };
+		672C4BFA1E94B8D400053D94 /* GFBase32Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 672C4BF21E94B8D400053D94 /* GFBase32Utils.m */; };
+		672C4BFB1E94B8D400053D94 /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 672C4BF41E94B8D400053D94 /* GFGeoHash.m */; };
+		672C4BFC1E94B8D400053D94 /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 672C4BF61E94B8D400053D94 /* GFGeoHashQuery.m */; };
+		672C4BFD1E94B8D400053D94 /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 672C4BF81E94B8D400053D94 /* GFQuery.m */; };
+		672C4C021E94BBDD00053D94 /* FootyGameAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C4C011E94BBDD00053D94 /* FootyGameAnnotation.swift */; };
+		672C4C041E94C55D00053D94 /* FootyGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672C4C031E94C55D00053D94 /* FootyGame.swift */; };
 		6792A1751E948A5E0076B116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A1741E948A5E0076B116 /* AppDelegate.swift */; };
 		6792A1771E948A5E0076B116 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A1761E948A5E0076B116 /* SignInVC.swift */; };
 		6792A17A1E948A5E0076B116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6792A1781E948A5E0076B116 /* Main.storyboard */; };
@@ -20,11 +29,31 @@
 		6792A1971E94917A0076B116 /* FancyTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A1961E94917A0076B116 /* FancyTextView.swift */; };
 		6792A1991E9491960076B116 /* CustomCircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A1981E9491960076B116 /* CustomCircleImageView.swift */; };
 		6792A19B1E9491A70076B116 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A19A1E9491A70076B116 /* DataService.swift */; };
-		6792A19E1E9491E20076B116 /* MapListViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A19D1E9491E20076B116 /* MapListViewVC.swift */; };
+		6792A19E1E9491E20076B116 /* MapListViewContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792A19D1E9491E20076B116 /* MapListViewContainerVC.swift */; };
 		6792A1A01E9493990076B116 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6792A19F1E9493990076B116 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6726B94C1E94B43F0024F134 /* MapViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewVC.swift; sourceTree = "<group>"; };
+		6726B94E1E94B44F0024F134 /* ListViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewVC.swift; sourceTree = "<group>"; };
+		672C4BE91E94B8D400053D94 /* GeoFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFire.h; sourceTree = "<group>"; };
+		672C4BEA1E94B8D400053D94 /* GFCircleQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCircleQuery.h; sourceTree = "<group>"; };
+		672C4BEB1E94B8D400053D94 /* GFQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFQuery.h; sourceTree = "<group>"; };
+		672C4BEC1E94B8D400053D94 /* GFRegionQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFRegionQuery.h; sourceTree = "<group>"; };
+		672C4BED1E94B8D400053D94 /* GeoFire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire-Prefix.pch"; sourceTree = "<group>"; };
+		672C4BEF1E94B8D400053D94 /* GeoFire+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire+Private.h"; sourceTree = "<group>"; };
+		672C4BF01E94B8D400053D94 /* GeoFire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoFire.m; sourceTree = "<group>"; };
+		672C4BF11E94B8D400053D94 /* GFBase32Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFBase32Utils.h; sourceTree = "<group>"; };
+		672C4BF21E94B8D400053D94 /* GFBase32Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFBase32Utils.m; sourceTree = "<group>"; };
+		672C4BF31E94B8D400053D94 /* GFGeoHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHash.h; sourceTree = "<group>"; };
+		672C4BF41E94B8D400053D94 /* GFGeoHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHash.m; sourceTree = "<group>"; };
+		672C4BF51E94B8D400053D94 /* GFGeoHashQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHashQuery.h; sourceTree = "<group>"; };
+		672C4BF61E94B8D400053D94 /* GFGeoHashQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHashQuery.m; sourceTree = "<group>"; };
+		672C4BF71E94B8D400053D94 /* GFQuery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GFQuery+Private.h"; sourceTree = "<group>"; };
+		672C4BF81E94B8D400053D94 /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
+		672C4BFE1E94B90600053D94 /* FootyMaps-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FootyMaps-Bridging-Header.h"; sourceTree = "<group>"; };
+		672C4C011E94BBDD00053D94 /* FootyGameAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FootyGameAnnotation.swift; sourceTree = "<group>"; };
+		672C4C031E94C55D00053D94 /* FootyGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FootyGame.swift; sourceTree = "<group>"; };
 		6792A1711E948A5E0076B116 /* FootyMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootyMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6792A1741E948A5E0076B116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6792A1761E948A5E0076B116 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -39,7 +68,7 @@
 		6792A1961E94917A0076B116 /* FancyTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyTextView.swift; sourceTree = "<group>"; };
 		6792A1981E9491960076B116 /* CustomCircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCircleImageView.swift; sourceTree = "<group>"; };
 		6792A19A1E9491A70076B116 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
-		6792A19D1E9491E20076B116 /* MapListViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapListViewVC.swift; sourceTree = "<group>"; };
+		6792A19D1E9491E20076B116 /* MapListViewContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapListViewContainerVC.swift; sourceTree = "<group>"; };
 		6792A19F1E9493990076B116 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7BB16D378332B725A373A911 /* Pods-FootyMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootyMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootyMaps/Pods-FootyMaps.debug.xcconfig"; sourceTree = "<group>"; };
 		A3FADAA6EEA5478003029191 /* Pods-FootyMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootyMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-FootyMaps/Pods-FootyMaps.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,6 +95,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		672C4BE71E94B8D400053D94 /* GeoFire */ = {
+			isa = PBXGroup;
+			children = (
+				672C4BE81E94B8D400053D94 /* API */,
+				672C4BED1E94B8D400053D94 /* GeoFire-Prefix.pch */,
+				672C4BEE1E94B8D400053D94 /* Implementation */,
+			);
+			path = GeoFire;
+			sourceTree = "<group>";
+		};
+		672C4BE81E94B8D400053D94 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				672C4BE91E94B8D400053D94 /* GeoFire.h */,
+				672C4BEA1E94B8D400053D94 /* GFCircleQuery.h */,
+				672C4BEB1E94B8D400053D94 /* GFQuery.h */,
+				672C4BEC1E94B8D400053D94 /* GFRegionQuery.h */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		672C4BEE1E94B8D400053D94 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				672C4BEF1E94B8D400053D94 /* GeoFire+Private.h */,
+				672C4BF01E94B8D400053D94 /* GeoFire.m */,
+				672C4BF11E94B8D400053D94 /* GFBase32Utils.h */,
+				672C4BF21E94B8D400053D94 /* GFBase32Utils.m */,
+				672C4BF31E94B8D400053D94 /* GFGeoHash.h */,
+				672C4BF41E94B8D400053D94 /* GFGeoHash.m */,
+				672C4BF51E94B8D400053D94 /* GFGeoHashQuery.h */,
+				672C4BF61E94B8D400053D94 /* GFGeoHashQuery.m */,
+				672C4BF71E94B8D400053D94 /* GFQuery+Private.h */,
+				672C4BF81E94B8D400053D94 /* GFQuery.m */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
 		6792A1681E948A5E0076B116 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +154,7 @@
 		6792A1731E948A5E0076B116 /* FootyMaps */ = {
 			isa = PBXGroup;
 			children = (
+				672C4BE71E94B8D400053D94 /* GeoFire */,
 				6792A18C1E948AD20076B116 /* Services */,
 				6792A18B1E948ACC0076B116 /* Model */,
 				6792A18A1E948AC60076B116 /* View */,
@@ -94,6 +162,7 @@
 				6792A1881E948AA70076B116 /* Utils */,
 				6792A1871E948AA00076B116 /* Layouts */,
 				6792A1861E948A920076B116 /* Supporting Files */,
+				672C4BFE1E94B90600053D94 /* FootyMaps-Bridging-Header.h */,
 			);
 			path = FootyMaps;
 			sourceTree = "<group>";
@@ -146,6 +215,8 @@
 		6792A18B1E948ACC0076B116 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				672C4C011E94BBDD00053D94 /* FootyGameAnnotation.swift */,
+				672C4C031E94C55D00053D94 /* FootyGame.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -173,7 +244,9 @@
 		6792A19C1E9491B10076B116 /* TabVCs */ = {
 			isa = PBXGroup;
 			children = (
-				6792A19D1E9491E20076B116 /* MapListViewVC.swift */,
+				6792A19D1E9491E20076B116 /* MapListViewContainerVC.swift */,
+				6726B94C1E94B43F0024F134 /* MapViewVC.swift */,
+				6726B94E1E94B44F0024F134 /* ListViewVC.swift */,
 			);
 			name = TabVCs;
 			sourceTree = "<group>";
@@ -313,14 +386,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				6792A19B1E9491A70076B116 /* DataService.swift in Sources */,
+				672C4C041E94C55D00053D94 /* FootyGame.swift in Sources */,
 				6792A1931E9491430076B116 /* CustomView.swift in Sources */,
 				6792A1991E9491960076B116 /* CustomCircleImageView.swift in Sources */,
 				6792A1771E948A5E0076B116 /* SignInVC.swift in Sources */,
-				6792A19E1E9491E20076B116 /* MapListViewVC.swift in Sources */,
+				6792A19E1E9491E20076B116 /* MapListViewContainerVC.swift in Sources */,
 				6792A1971E94917A0076B116 /* FancyTextView.swift in Sources */,
 				6792A1751E948A5E0076B116 /* AppDelegate.swift in Sources */,
+				672C4BFB1E94B8D400053D94 /* GFGeoHash.m in Sources */,
+				6726B94F1E94B44F0024F134 /* ListViewVC.swift in Sources */,
 				6792A1951E9491620076B116 /* FancyTextField.swift in Sources */,
+				6726B94D1E94B43F0024F134 /* MapViewVC.swift in Sources */,
+				672C4BFD1E94B8D400053D94 /* GFQuery.m in Sources */,
 				6792A1911E94912B0076B116 /* CustomTabBarController.swift in Sources */,
+				672C4C021E94BBDD00053D94 /* FootyGameAnnotation.swift in Sources */,
+				672C4BF91E94B8D400053D94 /* GeoFire.m in Sources */,
+				672C4BFC1E94B8D400053D94 /* GFGeoHashQuery.m in Sources */,
+				672C4BFA1E94B8D400053D94 /* GFBase32Utils.m in Sources */,
 				6792A18E1E9490E90076B116 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +533,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.benmakusha.FootyMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FootyMaps/FootyMaps-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -466,6 +549,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.benmakusha.FootyMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FootyMaps/FootyMaps-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

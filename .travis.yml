@@ -6,7 +6,7 @@ language: objective-c
 xcode_workspace: FootyMaps.xcworkspace
 xcode_scheme: FootyMaps
 osx_image: xcode8.2
-before_install:
-  - xcrun simctl delete 22FA2149-1241-469C-BF6D-462D3837DB72 # See https://github.com/travis-ci/travis-ci/issues/7031
+# before_install:
+#   - xcrun simctl delete 25222345-97AE-4751-BF2A-76BF3EE270F7 # See https://github.com/travis-ci/travis-ci/issues/7031
 script:
   - set -o pipefail && xcodebuild -workspace FootyMaps.xcworkspace -scheme FootyMaps -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.2' build | xcpretty

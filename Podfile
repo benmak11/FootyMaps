@@ -15,4 +15,5 @@ target 'FootyMaps' do
   pod 'FBSDKShareKit'
   pod 'SwiftKeychainWrapper', :git => 'https://github.com/jrendel/SwiftKeychainWrapper.git', :branch => 'master'
   pod 'FBSDKShareKit'
+  pod 'XLPagerTabStrip', :git => 'https://github.com/xmartlabs/XLPagerTabStrip.git', :branch => 'master'
 end
