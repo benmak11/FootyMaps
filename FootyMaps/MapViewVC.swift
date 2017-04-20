@@ -61,7 +61,7 @@ class MapViewVC: UIViewController, IndicatorInfoProvider, MKMapViewDelegate, CLL
     }
     
     func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 2000, 2000)
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 200, 200)
         
         mapView.setRegion(coordinateRegion, animated: true)
     }

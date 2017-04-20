@@ -23,6 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Facebook Auto Signup and Login
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        UITabBar.appearance().isTranslucent = false
+        UITabBar.appearance().barTintColor = UIColor(red: 39.0/255.0, green: 169.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        UITabBar.appearance().tintColor = UIColor.white
         return true
     }
     
