@@ -9,12 +9,19 @@
 import UIKit
 import XLPagerTabStrip
 
-class ListViewVC: UIViewController, IndicatorInfoProvider, UITableViewDelegate, UITableViewDataSource {
+class ListViewVC: UIViewController, IndicatorInfoProvider, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
+    @IBOutlet weak var listViewTableView: UITableView!
+    @IBOutlet weak var listViewSearchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        listViewTableView.delegate = self
+        listViewTableView.dataSource = self
+        
+        listViewSearchBar.delegate = self
+        listViewSearchBar.returnKeyType = UIReturnKeyType.done
     }
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {

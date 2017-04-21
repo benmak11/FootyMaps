@@ -8,12 +8,31 @@
 
 import UIKit
 
-class FriendsVC: UIViewController {
+class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
+    @IBOutlet weak var footballersTableView: UITableView!
+    @IBOutlet weak var footballersSearchBar: UISearchBar!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        footballersTableView.delegate = self
+        footballersTableView.dataSource = self
+        
+        footballersSearchBar.delegate = self
+        footballersSearchBar.returnKeyType = UIReturnKeyType.done
 
-        // Do any additional setup after loading the view.
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
     }
 
 }
