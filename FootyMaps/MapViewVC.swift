@@ -35,6 +35,16 @@ class MapViewVC: UIViewController, IndicatorInfoProvider, MKMapViewDelegate, CLL
         
         geoFireRef = FIRDatabase.database().reference()
         geoFire = GeoFire(firebaseRef: geoFireRef)                  //Initialized GeoFire
+        
+        
+        //Show User Location
+        let button: UIButton = UIButton(type: UIButtonType.custom)
+        button.setImage(UIImage(named: "pokeball"), for: UIControlState.normal)
+        button.addTarget(self, action: #selector(locationManagerButton), for: UIControlEvents.touchUpInside)
+        button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        let barButton = UIBarButtonItem(customView: button)
+        self.navigationItem.leftBarButtonItem = barButton
+        
     }
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
@@ -44,6 +54,10 @@ class MapViewVC: UIViewController, IndicatorInfoProvider, MKMapViewDelegate, CLL
     override func viewDidAppear(_ animated: Bool) {
         locationAuthStatus()
         mapView.reloadInputViews()
+    }
+    
+    func locationManagerButton(){
+        mapView!.setCenter(mapView!.userLocation.coordinate, animated: true)
     }
     
     func locationAuthStatus(){
