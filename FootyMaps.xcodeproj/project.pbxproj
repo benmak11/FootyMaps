@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3561CDE61EA96C7B005A213C /* FriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3561CDE51EA96C7B005A213C /* FriendsVC.swift */; };
+		3561CDE81EA96CA3005A213C /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3561CDE71EA96CA3005A213C /* ProfileVC.swift */; };
 		46F9D0F25941070D199F9717 /* Pods_FootyMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F135A5477F3FF4DEDC29A734 /* Pods_FootyMaps.framework */; };
 		6726B94D1E94B43F0024F134 /* MapViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6726B94C1E94B43F0024F134 /* MapViewVC.swift */; };
 		6726B94F1E94B44F0024F134 /* ListViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6726B94E1E94B44F0024F134 /* ListViewVC.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3561CDE51EA96C7B005A213C /* FriendsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsVC.swift; sourceTree = "<group>"; };
+		3561CDE71EA96CA3005A213C /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		6726B94C1E94B43F0024F134 /* MapViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewVC.swift; sourceTree = "<group>"; };
 		6726B94E1E94B44F0024F134 /* ListViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewVC.swift; sourceTree = "<group>"; };
 		672C4BE91E94B8D400053D94 /* GeoFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFire.h; sourceTree = "<group>"; };
@@ -198,8 +202,10 @@
 		6792A1891E948AAE0076B116 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6792A19C1E9491B10076B116 /* TabVCs */,
+				6792A19C1E9491B10076B116 /* MapListVCs */,
 				6792A1761E948A5E0076B116 /* SignInVC.swift */,
+				3561CDE51EA96C7B005A213C /* FriendsVC.swift */,
+				3561CDE71EA96CA3005A213C /* ProfileVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -241,14 +247,14 @@
 			name = Customizations;
 			sourceTree = "<group>";
 		};
-		6792A19C1E9491B10076B116 /* TabVCs */ = {
+		6792A19C1E9491B10076B116 /* MapListVCs */ = {
 			isa = PBXGroup;
 			children = (
 				6792A19D1E9491E20076B116 /* MapListViewContainerVC.swift */,
 				6726B94C1E94B43F0024F134 /* MapViewVC.swift */,
 				6726B94E1E94B44F0024F134 /* ListViewVC.swift */,
 			);
-			name = TabVCs;
+			name = MapListVCs;
 			sourceTree = "<group>";
 		};
 		FAEF7E596988D401E8AEDC5B /* Pods */ = {
@@ -394,11 +400,13 @@
 				6792A1971E94917A0076B116 /* FancyTextView.swift in Sources */,
 				6792A1751E948A5E0076B116 /* AppDelegate.swift in Sources */,
 				672C4BFB1E94B8D400053D94 /* GFGeoHash.m in Sources */,
+				3561CDE81EA96CA3005A213C /* ProfileVC.swift in Sources */,
 				6726B94F1E94B44F0024F134 /* ListViewVC.swift in Sources */,
 				6792A1951E9491620076B116 /* FancyTextField.swift in Sources */,
 				6726B94D1E94B43F0024F134 /* MapViewVC.swift in Sources */,
 				672C4BFD1E94B8D400053D94 /* GFQuery.m in Sources */,
 				6792A1911E94912B0076B116 /* CustomTabBarController.swift in Sources */,
+				3561CDE61EA96C7B005A213C /* FriendsVC.swift in Sources */,
 				672C4C021E94BBDD00053D94 /* FootyGameAnnotation.swift in Sources */,
 				672C4BF91E94B8D400053D94 /* GeoFire.m in Sources */,
 				672C4BFC1E94B8D400053D94 /* GFGeoHashQuery.m in Sources */,
