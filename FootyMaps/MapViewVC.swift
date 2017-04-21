@@ -17,6 +17,7 @@ class MapViewVC: UIViewController, IndicatorInfoProvider, MKMapViewDelegate, CLL
     @IBOutlet weak var mapView: MKMapView!
     
     let locationManager = CLLocationManager()
+    let regionRadius: CLLocationDistance = 200
     
     // MARK: Geofire object
     var geoFire: GeoFire!
@@ -61,7 +62,7 @@ class MapViewVC: UIViewController, IndicatorInfoProvider, MKMapViewDelegate, CLL
     }
     
     func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 200, 200)
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 100.0, regionRadius * 100.0)
         
         mapView.setRegion(coordinateRegion, animated: true)
     }

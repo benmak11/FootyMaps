@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3516B4951EA9B06C00407DD1 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3516B4941EA9B06C00407DD1 /* ListViewCell.swift */; };
+		3516B4971EA9B09100407DD1 /* FootballersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3516B4961EA9B09100407DD1 /* FootballersCell.swift */; };
 		3561CDE61EA96C7B005A213C /* FriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3561CDE51EA96C7B005A213C /* FriendsVC.swift */; };
 		3561CDE81EA96CA3005A213C /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3561CDE71EA96CA3005A213C /* ProfileVC.swift */; };
 		3561CDEA1EA9A20F005A213C /* CustButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3561CDE91EA9A20F005A213C /* CustButton.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3516B4941EA9B06C00407DD1 /* ListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
+		3516B4961EA9B09100407DD1 /* FootballersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FootballersCell.swift; sourceTree = "<group>"; };
 		3561CDE51EA96C7B005A213C /* FriendsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsVC.swift; sourceTree = "<group>"; };
 		3561CDE71EA96CA3005A213C /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		3561CDE91EA9A20F005A213C /* CustButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustButton.swift; sourceTree = "<group>"; };
@@ -216,6 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				6792A18F1E9491040076B116 /* Customizations */,
+				3516B4941EA9B06C00407DD1 /* ListViewCell.swift */,
+				3516B4961EA9B09100407DD1 /* FootballersCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -410,10 +416,12 @@
 				672C4BFD1E94B8D400053D94 /* GFQuery.m in Sources */,
 				6792A1911E94912B0076B116 /* CustomTabBarController.swift in Sources */,
 				3561CDE61EA96C7B005A213C /* FriendsVC.swift in Sources */,
+				3516B4951EA9B06C00407DD1 /* ListViewCell.swift in Sources */,
 				3561CDEA1EA9A20F005A213C /* CustButton.swift in Sources */,
 				672C4C021E94BBDD00053D94 /* FootyGameAnnotation.swift in Sources */,
 				672C4BF91E94B8D400053D94 /* GeoFire.m in Sources */,
 				672C4BFC1E94B8D400053D94 /* GFGeoHashQuery.m in Sources */,
+				3516B4971EA9B09100407DD1 /* FootballersCell.swift in Sources */,
 				672C4BFA1E94B8D400053D94 /* GFBase32Utils.m in Sources */,
 				6792A18E1E9490E90076B116 /* Constants.swift in Sources */,
 			);
