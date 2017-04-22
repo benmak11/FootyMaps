@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FBSDKLoginKit
 import FBSDKCoreKit
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -33,6 +34,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
     }
+    
+//    func handleEvent(forRegion region: CLRegion!) {
+//        // Show an alert if application is active
+//        if UIApplication.shared.applicationState == .active {
+//            guard let message = note(fromRegionIdentifier: region.identifier) else { return }
+//            window?.rootViewController?.showAlert(withTitle: nil, message: message)
+//        } else {
+//            // Otherwise present a local notification
+//            let notification = UILocalNotification()
+//            notification.alertBody = note(fromRegionIdentifier: region.identifier)
+//            notification.soundName = "Default"
+//            UIApplication.shared.presentLocalNotificationNow(notification)
+//        }
+//    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
