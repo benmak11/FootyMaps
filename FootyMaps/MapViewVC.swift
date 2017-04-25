@@ -11,6 +11,14 @@ import XLPagerTabStrip
 import MapKit
 import FirebaseDatabase
 
+extension MKMapView {
+    func zoomToUserLocation() {
+        guard let coordinate = userLocation.location?.coordinate else { return }
+        let region = MKCoordinateRegionMakeWithDistance(coordinate, 10000, 10000)
+        setRegion(region, animated: true)
+    }
+}
+
 class MapViewVC: UIViewController, IndicatorInfoProvider, MKMapViewDelegate, CLLocationManagerDelegate {
     
     // MARK: MapView object from Storyboard
@@ -32,18 +40,10 @@ class MapViewVC: UIViewController, IndicatorInfoProvider, MKMapViewDelegate, CLL
 
         mapView.delegate = self
         mapView.userTrackingMode = MKUserTrackingMode.follow
+        mapView.zoomToUserLocation()
         
         geoFireRef = FIRDatabase.database().reference()
         geoFire = GeoFire(firebaseRef: geoFireRef)                  //Initialized GeoFire
-        
-        
-        //Show User Location
-//        let button: UIButton = UIButton(type: UIButtonType.custom)
-//        button.setImage(UIImage(named: "pokeball"), for: UIControlState.normal)
-//        button.addTarget(self, action: #selector(locationManagerButton), for: UIControlEvents.touchUpInside)
-//        button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-//        let barButton = UIBarButtonItem(customView: button)
-//        self.navigationItem.leftBarButtonItem = barButton
         
     }
     
@@ -75,52 +75,20 @@ class MapViewVC: UIViewController, IndicatorInfoProvider, MKMapViewDelegate, CLL
         }
     }
     
-    func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 100.0, regionRadius * 100.0)
-        
-        mapView.setRegion(coordinateRegion, animated: true)
-    }
-    
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         
-        if let loc = userLocation.location {
+        if userLocation.location != nil {
             
             if !mapHasCenteredOnce {
-                centerMapOnLocation(location: loc)
+                mapView.zoomToUserLocation()
                 mapHasCenteredOnce = true
             }
         }
     }
     
-//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-//        
-//        let annoIdentifier = "FootyGame"
-//        var annotationView: MKAnnotationView?
-//        
-//        if annotation.isKind(of: MKUserLocation.self) {
-//            
-//            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "User")
-//        } else if let deqAnno = mapView.dequeueReusableAnnotationView(withIdentifier: annoIdentifier) {
-//            annotationView = deqAnno
-//            annotationView?.annotation = annotation
-//        } else {
-//            let av = MKAnnotationView(annotation: annotation, reuseIdentifier: annoIdentifier)
-//            av.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-//            annotationView = av
-//        }
-//        
-//        if let annotationView = annotationView, let anno = annotation as? FootyGameAnnotation {
-//            
-//            annotationView.canShowCallout = true
-//            annotationView.image = UIImage(named: "\(anno.gameId)")
-//            let btn = UIButton()
-//            btn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-//            btn.setImage(UIImage(named: "map"), for: .normal)
-//            annotationView.rightCalloutAccessoryView = btn
-//        }
-//        
-//        return annotationView
-//    }
+    @IBAction func returnUserToCurrentLocation(_ sender: Any) {
+        mapView.zoomToUserLocation()
+    }
     
     func createSighting(forLocation location: CLLocation, withPokemon gameId: Int) {
         
@@ -172,9 +140,41 @@ class MapViewVC: UIViewController, IndicatorInfoProvider, MKMapViewDelegate, CLL
 //        }
 //    }
     
+
+//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+//
+//        let annoIdentifier = "FootyGame"
+//        var annotationView: MKAnnotationView?
+//
+//        if annotation.isKind(of: MKUserLocation.self) {
+//
+//            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "User")
+//        } else if let deqAnno = mapView.dequeueReusableAnnotationView(withIdentifier: annoIdentifier) {
+//            annotationView = deqAnno
+//            annotationView?.annotation = annotation
+//        } else {
+//            let av = MKAnnotationView(annotation: annotation, reuseIdentifier: annoIdentifier)
+//            av.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+//            annotationView = av
+//        }
+//
+//        if let annotationView = annotationView, let anno = annotation as? FootyGameAnnotation {
+//
+//            annotationView.canShowCallout = true
+//            annotationView.image = UIImage(named: "\(anno.gameId)")
+//            let btn = UIButton()
+//            btn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+//            btn.setImage(UIImage(named: "map"), for: .normal)
+//            annotationView.rightCalloutAccessoryView = btn
+//        }
+//
+//        return annotationView
+//    }
+    
     func userDidTapPokemon(data: Int) {
         let loc = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
         createSighting(forLocation: loc, withPokemon: data)
     }
 
 }
+

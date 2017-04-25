@@ -643,6 +643,9 @@
                                     <constraint firstAttribute="width" constant="55" id="isl-x7-9vm"/>
                                 </constraints>
                                 <state key="normal" image="CurrentLocation"/>
+                                <connections>
+                                    <action selector="returnUserToCurrentLocation:" destination="pEc-f6-aNm" eventType="touchUpInside" id="XO5-19-W7y"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
