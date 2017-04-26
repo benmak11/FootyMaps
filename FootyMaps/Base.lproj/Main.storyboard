@@ -688,6 +688,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldEditting:" destination="Vgc-w4-gtR" eventType="editingDidBegin" id="gK3-9c-dK3"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyM-Lo-opI">
                                 <rect key="frame" x="299" y="109" width="49" height="25"/>
@@ -700,16 +703,46 @@
                                     <action selector="displacePlacePicker:" destination="Vgc-w4-gtR" eventType="touchUpInside" id="oC1-RL-pZv"/>
                                 </connections>
                             </button>
-                            <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="NVH-AF-rML">
-                                <rect key="frame" x="0.0" y="418" width="375" height="200"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="484-TW-XmI">
+                                <rect key="frame" x="16" y="215" width="130" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="3wm-bb-dLZ"/>
-                                    <constraint firstAttribute="height" constant="200" id="fkc-VL-LlZ"/>
+                                    <constraint firstAttribute="height" constant="20" id="SfD-IE-6BW"/>
+                                    <constraint firstAttribute="width" constant="130" id="e11-My-bnj"/>
                                 </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="514780093.25201398">
-                                    <!--2017-04-25 02:28:13 +0000-->
-                                </date>
-                            </datePicker>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ver-ly-kK3">
+                                <rect key="frame" x="176" y="215" width="75" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Pai-G4-Gcn"/>
+                                    <constraint firstAttribute="height" constant="20" id="eKi-SA-0eA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="30" maxValue="120" translatesAutoresizingMaskIntoConstraints="NO" id="msC-Y0-D1y">
+                                <rect key="frame" x="14" y="270" width="347" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="Yi2-z1-VVY"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeDuration:" destination="Vgc-w4-gtR" eventType="valueChanged" id="HX8-9n-wwc"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWZ-H2-d9u">
+                                <rect key="frame" x="107" y="488" width="160" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="PlE-dj-ewa"/>
+                                    <constraint firstAttribute="height" constant="30" id="d5r-Rk-Qzd"/>
+                                </constraints>
+                                <state key="normal" title="Add Game!"/>
+                                <connections>
+                                    <action selector="addingGame:" destination="Vgc-w4-gtR" eventType="touchUpInside" id="GwS-ty-wE2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -717,26 +750,36 @@
                             <constraint firstItem="eBl-A9-IZ3" firstAttribute="top" secondItem="1ce-PX-yCK" secondAttribute="top" id="2I7-u6-nex"/>
                             <constraint firstItem="T1q-Vu-H0B" firstAttribute="top" secondItem="DNN-9n-6jN" secondAttribute="bottom" constant="428" id="2Qf-Fa-vxQ"/>
                             <constraint firstAttribute="trailing" secondItem="eBl-A9-IZ3" secondAttribute="trailing" id="3wy-jE-Exm"/>
-                            <constraint firstItem="NVH-AF-rML" firstAttribute="leading" secondItem="1ce-PX-yCK" secondAttribute="leading" id="7jK-Ed-KrK"/>
+                            <constraint firstItem="msC-Y0-D1y" firstAttribute="leading" secondItem="1ce-PX-yCK" secondAttribute="leadingMargin" id="CU4-yj-QMI"/>
+                            <constraint firstItem="484-TW-XmI" firstAttribute="leading" secondItem="1ce-PX-yCK" secondAttribute="leadingMargin" id="EcU-zT-eut"/>
                             <constraint firstItem="iZ2-qk-cti" firstAttribute="leading" secondItem="1ce-PX-yCK" secondAttribute="leadingMargin" constant="96" id="Ezw-Bo-cdo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nyM-Lo-opI" secondAttribute="trailing" constant="11" id="FNl-xa-ZdC"/>
-                            <constraint firstItem="T1q-Vu-H0B" firstAttribute="top" secondItem="NVH-AF-rML" secondAttribute="bottom" id="IrV-tp-TAl"/>
-                            <constraint firstAttribute="trailing" secondItem="NVH-AF-rML" secondAttribute="trailing" id="LBh-Ls-p34"/>
+                            <constraint firstItem="484-TW-XmI" firstAttribute="top" secondItem="DNN-9n-6jN" secondAttribute="bottom" constant="25" id="Jnm-PD-ecO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZWZ-H2-d9u" secondAttribute="trailing" constant="92" id="KKK-bv-bRU"/>
+                            <constraint firstItem="msC-Y0-D1y" firstAttribute="trailing" secondItem="1ce-PX-yCK" secondAttribute="trailingMargin" id="LjK-bU-xs9"/>
                             <constraint firstItem="dLP-dO-Kpk" firstAttribute="leading" secondItem="DNN-9n-6jN" secondAttribute="leading" id="O9m-2x-cLB"/>
                             <constraint firstItem="eBl-A9-IZ3" firstAttribute="leading" secondItem="1ce-PX-yCK" secondAttribute="leading" id="Qg2-3f-THa"/>
+                            <constraint firstItem="T1q-Vu-H0B" firstAttribute="top" secondItem="ZWZ-H2-d9u" secondAttribute="bottom" constant="100" id="QpI-ub-Jdb"/>
                             <constraint firstItem="dLP-dO-Kpk" firstAttribute="trailing" secondItem="DNN-9n-6jN" secondAttribute="trailing" id="R64-xL-cSg"/>
                             <constraint firstItem="dLP-dO-Kpk" firstAttribute="top" secondItem="iZ2-qk-cti" secondAttribute="bottom" constant="20" id="RXw-f1-P5G"/>
                             <constraint firstItem="iZ2-qk-cti" firstAttribute="centerX" secondItem="eBl-A9-IZ3" secondAttribute="centerX" id="Tef-Pm-UyB"/>
                             <constraint firstItem="dLP-dO-Kpk" firstAttribute="centerY" secondItem="nyM-Lo-opI" secondAttribute="centerY" id="WXc-rF-CXK"/>
                             <constraint firstItem="DNN-9n-6jN" firstAttribute="top" secondItem="nyM-Lo-opI" secondAttribute="bottom" constant="26" id="YtX-ti-1UT"/>
+                            <constraint firstItem="msC-Y0-D1y" firstAttribute="top" secondItem="ver-ly-kK3" secondAttribute="bottom" constant="35" id="dpE-QU-bUY"/>
                             <constraint firstItem="nyM-Lo-opI" firstAttribute="top" secondItem="eBl-A9-IZ3" secondAttribute="bottom" constant="88" id="gsg-FV-13y"/>
                             <constraint firstItem="DNN-9n-6jN" firstAttribute="top" secondItem="dLP-dO-Kpk" secondAttribute="bottom" constant="23" id="i7q-uW-lFG"/>
+                            <constraint firstItem="ver-ly-kK3" firstAttribute="leading" secondItem="484-TW-XmI" secondAttribute="trailing" constant="30" id="jrh-fz-9pb"/>
                             <constraint firstItem="iZ2-qk-cti" firstAttribute="centerX" secondItem="dLP-dO-Kpk" secondAttribute="centerX" id="q0X-hw-WE2"/>
+                            <constraint firstItem="ZWZ-H2-d9u" firstAttribute="leading" secondItem="1ce-PX-yCK" secondAttribute="leadingMargin" constant="91" id="qQ2-hz-sNr"/>
                             <constraint firstItem="dLP-dO-Kpk" firstAttribute="leading" secondItem="1ce-PX-yCK" secondAttribute="leadingMargin" id="wYQ-1e-6Z9"/>
+                            <constraint firstItem="ver-ly-kK3" firstAttribute="top" secondItem="DNN-9n-6jN" secondAttribute="bottom" constant="25" id="ycs-tE-U6d"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="gameDurationLbl" destination="ver-ly-kK3" id="4Y4-1i-09m"/>
                         <outlet property="placeTextField" destination="dLP-dO-Kpk" id="KHe-VO-QgJ"/>
+                        <outlet property="timeSlider" destination="msC-Y0-D1y" id="6Yp-kJ-cn2"/>
+                        <outlet property="timeTextField" destination="DNN-9n-6jN" id="ew0-oR-UeN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BrF-Ov-xHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
