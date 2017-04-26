@@ -11,6 +11,8 @@ import Firebase
 import FBSDKLoginKit
 import FBSDKCoreKit
 import CoreLocation
+import GoogleMaps
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,26 +30,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().isTranslucent = false
         UITabBar.appearance().barTintColor = UIColor(red: 39.0/255.0, green: 169.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         UITabBar.appearance().tintColor = UIColor.white
+        
+        GMSPlacesClient.provideAPIKey("AIzaSyDri78ggfkkNV02aqrZchO5z9vR8JLGymA")
+        GMSServices.provideAPIKey("AIzaSyDri78ggfkkNV02aqrZchO5z9vR8JLGymA")
         return true
     }
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
     }
-    
-//    func handleEvent(forRegion region: CLRegion!) {
-//        // Show an alert if application is active
-//        if UIApplication.shared.applicationState == .active {
-//            guard let message = note(fromRegionIdentifier: region.identifier) else { return }
-//            window?.rootViewController?.showAlert(withTitle: nil, message: message)
-//        } else {
-//            // Otherwise present a local notification
-//            let notification = UILocalNotification()
-//            notification.alertBody = note(fromRegionIdentifier: region.identifier)
-//            notification.soundName = "Default"
-//            UIApplication.shared.presentLocalNotificationNow(notification)
-//        }
-//    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

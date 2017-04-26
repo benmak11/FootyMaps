@@ -454,6 +454,9 @@
                                             <constraint firstAttribute="width" constant="30" id="KZd-Y5-0IM"/>
                                         </constraints>
                                         <state key="normal" image="add_friend_btn"/>
+                                        <connections>
+                                            <segue destination="Vgc-w4-gtR" kind="show" id="KPx-Dm-Ixj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.15294117647058825" green="0.66274509803921566" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -621,6 +624,168 @@
             </objects>
             <point key="canvasLocation" x="2685.5999999999999" y="-504.19790104947532"/>
         </scene>
+        <!--Create GameVC-->
+        <scene sceneID="pP8-5o-SlT">
+            <objects>
+                <viewController id="Vgc-w4-gtR" customClass="CreateGameVC" customModule="FootyMaps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z85-uu-PdU"/>
+                        <viewControllerLayoutGuide type="bottom" id="T1q-Vu-H0B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1ce-PX-yCK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBl-A9-IZ3" customClass="CustomView" customModule="FootyMaps" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="21"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8j-Gp-Zix">
+                                        <rect key="frame" x="105" y="-9.5" width="165" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="165" id="HdC-vQ-W3m"/>
+                                            <constraint firstAttribute="height" constant="40" id="LFO-up-wsY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="27"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9h-2W-wdU">
+                                        <rect key="frame" x="8" y="-4.5" width="50" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="PL4-nn-Om1"/>
+                                            <constraint firstAttribute="height" constant="30" id="s2T-hb-LM3"/>
+                                        </constraints>
+                                        <state key="normal" image="logout">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dismissCreateGameVC:" destination="Vgc-w4-gtR" eventType="touchUpInside" id="QKx-Ac-TKp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1529411765" green="0.66274509800000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="e9h-2W-wdU" firstAttribute="centerY" secondItem="z8j-Gp-Zix" secondAttribute="centerY" id="Baq-KO-WA7"/>
+                                    <constraint firstItem="z8j-Gp-Zix" firstAttribute="centerX" secondItem="eBl-A9-IZ3" secondAttribute="centerX" id="Caa-Je-5El"/>
+                                    <constraint firstItem="e9h-2W-wdU" firstAttribute="centerY" secondItem="eBl-A9-IZ3" secondAttribute="centerY" id="nvy-vC-Q9b"/>
+                                    <constraint firstItem="e9h-2W-wdU" firstAttribute="leading" secondItem="eBl-A9-IZ3" secondAttribute="leadingMargin" id="xmJ-9S-bOM"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Game Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZ2-qk-cti">
+                                <rect key="frame" x="112" y="57" width="150" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Place" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dLP-dO-Kpk" customClass="FancyTextField" customModule="FootyMaps" customModuleProvider="target">
+                                <rect key="frame" x="16" y="107" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DNN-9n-6jN" customClass="FancyTextField" customModule="FootyMaps" customModuleProvider="target">
+                                <rect key="frame" x="16" y="160" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldEditting:" destination="Vgc-w4-gtR" eventType="editingDidBegin" id="gK3-9c-dK3"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyM-Lo-opI">
+                                <rect key="frame" x="299" y="109" width="49" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="KIt-Bt-zSl"/>
+                                    <constraint firstAttribute="height" constant="25" id="qip-2r-g91"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="displacePlacePicker:" destination="Vgc-w4-gtR" eventType="touchUpInside" id="oC1-RL-pZv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="484-TW-XmI">
+                                <rect key="frame" x="16" y="215" width="130" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="SfD-IE-6BW"/>
+                                    <constraint firstAttribute="width" constant="130" id="e11-My-bnj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ver-ly-kK3">
+                                <rect key="frame" x="176" y="215" width="75" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Pai-G4-Gcn"/>
+                                    <constraint firstAttribute="height" constant="20" id="eKi-SA-0eA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="30" maxValue="120" translatesAutoresizingMaskIntoConstraints="NO" id="msC-Y0-D1y">
+                                <rect key="frame" x="14" y="270" width="347" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="Yi2-z1-VVY"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeDuration:" destination="Vgc-w4-gtR" eventType="valueChanged" id="HX8-9n-wwc"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWZ-H2-d9u">
+                                <rect key="frame" x="107" y="488" width="160" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="PlE-dj-ewa"/>
+                                    <constraint firstAttribute="height" constant="30" id="d5r-Rk-Qzd"/>
+                                </constraints>
+                                <state key="normal" title="Add Game!"/>
+                                <connections>
+                                    <action selector="addingGame:" destination="Vgc-w4-gtR" eventType="touchUpInside" id="GwS-ty-wE2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iZ2-qk-cti" firstAttribute="top" secondItem="eBl-A9-IZ3" secondAttribute="bottom" constant="36" id="1MR-CM-Q1E"/>
+                            <constraint firstItem="eBl-A9-IZ3" firstAttribute="top" secondItem="1ce-PX-yCK" secondAttribute="top" id="2I7-u6-nex"/>
+                            <constraint firstItem="T1q-Vu-H0B" firstAttribute="top" secondItem="DNN-9n-6jN" secondAttribute="bottom" constant="428" id="2Qf-Fa-vxQ"/>
+                            <constraint firstAttribute="trailing" secondItem="eBl-A9-IZ3" secondAttribute="trailing" id="3wy-jE-Exm"/>
+                            <constraint firstItem="msC-Y0-D1y" firstAttribute="leading" secondItem="1ce-PX-yCK" secondAttribute="leadingMargin" id="CU4-yj-QMI"/>
+                            <constraint firstItem="484-TW-XmI" firstAttribute="leading" secondItem="1ce-PX-yCK" secondAttribute="leadingMargin" id="EcU-zT-eut"/>
+                            <constraint firstItem="iZ2-qk-cti" firstAttribute="leading" secondItem="1ce-PX-yCK" secondAttribute="leadingMargin" constant="96" id="Ezw-Bo-cdo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nyM-Lo-opI" secondAttribute="trailing" constant="11" id="FNl-xa-ZdC"/>
+                            <constraint firstItem="484-TW-XmI" firstAttribute="top" secondItem="DNN-9n-6jN" secondAttribute="bottom" constant="25" id="Jnm-PD-ecO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZWZ-H2-d9u" secondAttribute="trailing" constant="92" id="KKK-bv-bRU"/>
+                            <constraint firstItem="msC-Y0-D1y" firstAttribute="trailing" secondItem="1ce-PX-yCK" secondAttribute="trailingMargin" id="LjK-bU-xs9"/>
+                            <constraint firstItem="dLP-dO-Kpk" firstAttribute="leading" secondItem="DNN-9n-6jN" secondAttribute="leading" id="O9m-2x-cLB"/>
+                            <constraint firstItem="eBl-A9-IZ3" firstAttribute="leading" secondItem="1ce-PX-yCK" secondAttribute="leading" id="Qg2-3f-THa"/>
+                            <constraint firstItem="T1q-Vu-H0B" firstAttribute="top" secondItem="ZWZ-H2-d9u" secondAttribute="bottom" constant="100" id="QpI-ub-Jdb"/>
+                            <constraint firstItem="dLP-dO-Kpk" firstAttribute="trailing" secondItem="DNN-9n-6jN" secondAttribute="trailing" id="R64-xL-cSg"/>
+                            <constraint firstItem="dLP-dO-Kpk" firstAttribute="top" secondItem="iZ2-qk-cti" secondAttribute="bottom" constant="20" id="RXw-f1-P5G"/>
+                            <constraint firstItem="iZ2-qk-cti" firstAttribute="centerX" secondItem="eBl-A9-IZ3" secondAttribute="centerX" id="Tef-Pm-UyB"/>
+                            <constraint firstItem="dLP-dO-Kpk" firstAttribute="centerY" secondItem="nyM-Lo-opI" secondAttribute="centerY" id="WXc-rF-CXK"/>
+                            <constraint firstItem="DNN-9n-6jN" firstAttribute="top" secondItem="nyM-Lo-opI" secondAttribute="bottom" constant="26" id="YtX-ti-1UT"/>
+                            <constraint firstItem="msC-Y0-D1y" firstAttribute="top" secondItem="ver-ly-kK3" secondAttribute="bottom" constant="35" id="dpE-QU-bUY"/>
+                            <constraint firstItem="nyM-Lo-opI" firstAttribute="top" secondItem="eBl-A9-IZ3" secondAttribute="bottom" constant="88" id="gsg-FV-13y"/>
+                            <constraint firstItem="DNN-9n-6jN" firstAttribute="top" secondItem="dLP-dO-Kpk" secondAttribute="bottom" constant="23" id="i7q-uW-lFG"/>
+                            <constraint firstItem="ver-ly-kK3" firstAttribute="leading" secondItem="484-TW-XmI" secondAttribute="trailing" constant="30" id="jrh-fz-9pb"/>
+                            <constraint firstItem="iZ2-qk-cti" firstAttribute="centerX" secondItem="dLP-dO-Kpk" secondAttribute="centerX" id="q0X-hw-WE2"/>
+                            <constraint firstItem="ZWZ-H2-d9u" firstAttribute="leading" secondItem="1ce-PX-yCK" secondAttribute="leadingMargin" constant="91" id="qQ2-hz-sNr"/>
+                            <constraint firstItem="dLP-dO-Kpk" firstAttribute="leading" secondItem="1ce-PX-yCK" secondAttribute="leadingMargin" id="wYQ-1e-6Z9"/>
+                            <constraint firstItem="ver-ly-kK3" firstAttribute="top" secondItem="DNN-9n-6jN" secondAttribute="bottom" constant="25" id="ycs-tE-U6d"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gameDurationLbl" destination="ver-ly-kK3" id="4Y4-1i-09m"/>
+                        <outlet property="placeTextField" destination="dLP-dO-Kpk" id="KHe-VO-QgJ"/>
+                        <outlet property="timeSlider" destination="msC-Y0-D1y" id="6Yp-kJ-cn2"/>
+                        <outlet property="timeTextField" destination="DNN-9n-6jN" id="ew0-oR-UeN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BrF-Ov-xHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1528.8" y="-1504.4977511244379"/>
+        </scene>
         <!--Map ViewVC-->
         <scene sceneID="vTA-fp-fAU">
             <objects>
@@ -693,6 +858,7 @@
         <image name="add_location_btn" width="14" height="19"/>
         <image name="f" width="352" height="328"/>
         <image name="friends_icon" width="17" height="17"/>
+        <image name="logout" width="15" height="15"/>
         <image name="profile" width="113" height="155"/>
         <image name="sign-out" width="92" height="65"/>
     </resources>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		350F24411EAEDDEE00FEEF59 /* CreateGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350F24401EAEDDEE00FEEF59 /* CreateGameVC.swift */; };
 		3516B4951EA9B06C00407DD1 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3516B4941EA9B06C00407DD1 /* ListViewCell.swift */; };
 		3516B4971EA9B09100407DD1 /* FootballersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3516B4961EA9B09100407DD1 /* FootballersCell.swift */; };
 		3561CDE61EA96C7B005A213C /* FriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3561CDE51EA96C7B005A213C /* FriendsVC.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		350F24401EAEDDEE00FEEF59 /* CreateGameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGameVC.swift; sourceTree = "<group>"; };
 		3516B4941EA9B06C00407DD1 /* ListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
 		3516B4961EA9B09100407DD1 /* FootballersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FootballersCell.swift; sourceTree = "<group>"; };
 		3561CDE51EA96C7B005A213C /* FriendsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsVC.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				6792A1761E948A5E0076B116 /* SignInVC.swift */,
 				3561CDE51EA96C7B005A213C /* FriendsVC.swift */,
 				3561CDE71EA96CA3005A213C /* ProfileVC.swift */,
+				350F24401EAEDDEE00FEEF59 /* CreateGameVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				3516B4971EA9B09100407DD1 /* FootballersCell.swift in Sources */,
 				672C4BFA1E94B8D400053D94 /* GFBase32Utils.m in Sources */,
 				6792A18E1E9490E90076B116 /* Constants.swift in Sources */,
+				350F24411EAEDDEE00FEEF59 /* CreateGameVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

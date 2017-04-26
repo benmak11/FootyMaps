@@ -14,6 +14,7 @@ import FirebaseDatabase
 extension MKMapView {
     func zoomToUserLocation() {
         guard let coordinate = userLocation.location?.coordinate else { return }
+        print("BEN: User's current coordinate \(coordinate)")
         let region = MKCoordinateRegionMakeWithDistance(coordinate, 10000, 10000)
         setRegion(region, animated: true)
     }
@@ -25,7 +26,6 @@ class MapViewVC: UIViewController, IndicatorInfoProvider, MKMapViewDelegate, CLL
     @IBOutlet weak var mapView: MKMapView!
     
     let locationManager = CLLocationManager()
-    let regionRadius: CLLocationDistance = 200
     
     // MARK: Geofire object
     var geoFire: GeoFire!
