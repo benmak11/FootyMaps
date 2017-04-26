@@ -43,7 +43,6 @@ class CreateGameVC: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         
         let toolBar = UIToolbar().ToolbarPiker(mySelect: #selector(CreateGameVC.dismissPicker))
-        
         timeTextField.inputAccessoryView = toolBar
 
     }
@@ -94,8 +93,8 @@ class CreateGameVC: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func changeDuration(_ sender: UISlider) {
+        sender.setValue((Float)((Int)((sender.value + 15) / 30) * 30), animated: true)
         let currentValue = Int(sender.value)
-        print("Slider changing to \(currentValue) ?")
         gameDurationLbl.text = "\(currentValue) m"
     }
     
@@ -108,8 +107,6 @@ class CreateGameVC: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func addingGame(_ sender: Any) {
-        
-        
         
         dismiss(animated: true, completion: nil)
     }
