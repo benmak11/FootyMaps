@@ -14,5 +14,8 @@ class ProfileDetailVC: UIViewController {
         super.viewDidLoad()
 
     }
-
+    
+    @IBAction func dismissEditProfile(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }
