@@ -285,6 +285,9 @@
                                         <state key="normal" title="Edit">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="ouo-Sz-GEi" kind="show" identifier="goToDetail" id="DUG-L5-Eoo"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1529411765" green="0.66274509800000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -419,6 +422,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KEh-f2-tZ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1765.5999999999999" y="788.45577211394311"/>
+        </scene>
+        <!--Profile DetailVC-->
+        <scene sceneID="qst-TM-pI2">
+            <objects>
+                <viewController id="ouo-Sz-GEi" customClass="ProfileDetailVC" customModule="FootyMaps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vbC-L0-ScT"/>
+                        <viewControllerLayoutGuide type="bottom" id="FNo-GE-QK0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bb5-0f-xyc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UwJ-aM-q2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2686" y="788"/>
         </scene>
         <!--Games-->
         <scene sceneID="pDB-GG-gPd">
@@ -784,7 +805,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BrF-Ov-xHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1528.8" y="-1504.4977511244379"/>
+            <point key="canvasLocation" x="1766" y="-1496"/>
         </scene>
         <!--Map ViewVC-->
         <scene sceneID="vTA-fp-fAU">
