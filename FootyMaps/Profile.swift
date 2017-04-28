@@ -29,6 +29,11 @@ class Profile {
     var age: Int {
         return _age
     }
+    
+    var emailAddress: String {
+        return _emailAddress
+    }
+    
     var postKey: String {
         return _postKey
     }

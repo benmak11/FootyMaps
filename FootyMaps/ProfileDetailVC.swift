@@ -21,11 +21,35 @@ class ProfileDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.updateUI()
     }
     
     func setup(){
         //setup the user's image from facebook here
+    }
+    
+    func updateUI(){
+        
+        DataService.ds.REF_USER_CURRENT.observe(.value, with: { (snapshot) in
+            let values = snapshot.value as? [String: Any]
+            
+            if let userAge = values!["age"] as? String {
+                self.ageTextField.text = userAge
+            }
+            
+            if let userName = values!["username"] as? String {
+                self.usernameTextField.text = userName
+            }
+            
+            if let userEmail = values!["email"] as? String {
+                self.email.text = userEmail
+            }
+            
+            if let userFavPlayer = values!["favoriteFootballer"] as? String {
+                self.favoriteFootballerTextField.text = userFavPlayer
+            }
+        })
     }
     
     func postUserDetailsToFirebase(){

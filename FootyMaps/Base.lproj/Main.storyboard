@@ -494,7 +494,7 @@
                                     <constraint firstItem="AVd-z2-DJ9" firstAttribute="top" secondItem="Psc-Tb-yWt" secondAttribute="top" constant="20" id="yiX-gW-VOk"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Og-Ie-LSa" customClass="FancyTextField" customModule="FootyMaps" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="1Og-Ie-LSa" customClass="FancyTextField" customModule="FootyMaps" customModuleProvider="target">
                                 <rect key="frame" x="16" y="167" width="225" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="225" id="ThJ-Xq-Yob"/>
@@ -503,7 +503,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfI-na-Lzq" customClass="FancyTextField" customModule="FootyMaps" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="pfI-na-Lzq" customClass="FancyTextField" customModule="FootyMaps" customModuleProvider="target">
                                 <rect key="frame" x="16" y="222" width="270" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="270" id="c1c-Tp-dJh"/>
@@ -512,7 +512,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Favorite Footballer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RVG-fg-KSO" customClass="FancyTextField" customModule="FootyMaps" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Favorite Footballer" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="RVG-fg-KSO" customClass="FancyTextField" customModule="FootyMaps" customModuleProvider="target">
                                 <rect key="frame" x="16" y="277" width="270" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="270" id="pXN-fI-zyl"/>
@@ -538,7 +538,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xwg-Nc-eQS" customClass="FancyTextField" customModule="FootyMaps" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Xwg-Nc-eQS" customClass="FancyTextField" customModule="FootyMaps" customModuleProvider="target">
                                 <rect key="frame" x="16" y="377" width="270" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="270" id="rhE-Xg-FRz"/>
