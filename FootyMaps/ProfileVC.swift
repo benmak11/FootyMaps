@@ -17,7 +17,7 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var favFootballerLbl: UILabel!
     @IBOutlet weak var numOfColleagues: UILabel!
     
-    var profileDetails: Profile!
+    var profile = [Profile]()
     
     private var ref: FIRDatabaseReference!
     
@@ -28,12 +28,22 @@ class ProfileVC: UIViewController {
     }
     
     func configureProfileVC(){
-        print("BEN: --- \(USERNAME))")
-//        print("BEN: --- \(profileDetails.age)")
-//        print("BEN: --- \(profileDetails.favFootballer)")
-        self.realNameFB.text = USERNAME//profileDetails?.username
-        self.ageLbl.text = "\(String(describing: profileDetails?.age))"
-        self.favFootballerLbl.text = profileDetails?.favFootballer
+        //print("BEN: --- \(USERNAME))")
+        DataService.ds.REF_USER_CURRENT.observe(.value, with: { (snapshot) in
+            let values = snapshot.value as? [String: Any]
+            
+            if let userAge = values!["age"] as? String {
+                self.ageLbl.text = userAge
+            }
+            
+            if let userName = values!["username"] as? String {
+                self.realNameFB.text = userName
+            }
+            
+            if let userFavPlayer = values!["favoriteFootballer"] as? String {
+                self.favFootballerLbl.text = userFavPlayer
+            }
+        })
         
         // Need to set the colleagues the user has
     }
