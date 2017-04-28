@@ -86,39 +86,39 @@ class MapViewVC: UIViewController, IndicatorInfoProvider, MKMapViewDelegate, CLL
         }
     }
     
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
-        if annotation .isEqual(MKUserLocation.self) {
-            return nil
-        }
-        
-        let annoIdentifier = "FootyGame"
-        var annotationView: MKAnnotationView?
-        
-        if annotation.isKind(of: MKUserLocation.self) {
-            
-            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "User")
-        } else if let deqAnno = mapView.dequeueReusableAnnotationView(withIdentifier: annoIdentifier) {
-            annotationView = deqAnno
-            annotationView?.annotation = annotation
-        } else {
-            let av = MKAnnotationView(annotation: annotation, reuseIdentifier: annoIdentifier)
-            av.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-            annotationView = av
-        }
-        
-        if let annotationView = annotationView, let anno = annotation as? FootyGameAnnotation {
-            
-            annotationView.canShowCallout = true
-            annotationView.image = UIImage(named: "\(anno.gameId)")
-            let btn = UIButton()
-            btn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-            btn.setImage(UIImage(named: "map"), for: .normal)
-            annotationView.rightCalloutAccessoryView = btn
-        }
-        
-        return annotationView
-    }
+//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+//        
+//        if annotation .isEqual(MKUserLocation.self) {
+//            return nil
+//        }
+//        
+//        let annoIdentifier = "FootyGame"
+//        var annotationView: MKAnnotationView?
+//        
+//        if annotation.isKind(of: MKUserLocation.self) {
+//            
+//            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "User")
+//        } else if let deqAnno = mapView.dequeueReusableAnnotationView(withIdentifier: annoIdentifier) {
+//            annotationView = deqAnno
+//            annotationView?.annotation = annotation
+//        } else {
+//            let av = MKAnnotationView(annotation: annotation, reuseIdentifier: annoIdentifier)
+//            av.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+//            annotationView = av
+//        }
+//        
+//        if let annotationView = annotationView, let anno = annotation as? FootyGameAnnotation {
+//            
+//            annotationView.canShowCallout = true
+//            annotationView.image = UIImage(named: "\(anno.gameId)")
+//            let btn = UIButton()
+//            btn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+//            btn.setImage(UIImage(named: "map"), for: .normal)
+//            annotationView.rightCalloutAccessoryView = btn
+//        }
+//        
+//        return annotationView
+//    }
     
     @IBAction func returnUserToCurrentLocation(_ sender: Any) {
         mapView.zoomToUserLocation()
@@ -152,26 +152,26 @@ class MapViewVC: UIViewController, IndicatorInfoProvider, MKMapViewDelegate, CLL
         showGamesOnMap(location: loc)
     }
     
-    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        
-        if let anno = view.annotation as? FootyGameAnnotation {
-            
-            var place: MKPlacemark!
-            if #available(iOS 10.0, *) {
-                place = MKPlacemark(coordinate: anno.coordinate)
-            } else {
-                place = MKPlacemark(coordinate: anno.coordinate, addressDictionary: nil)
-            }
-            let destination = MKMapItem(placemark: place)
-            destination.name = "Game Sighting"
-            let regionDistance: CLLocationDistance = 10000
-            let regionSpan = MKCoordinateRegionMakeWithDistance(anno.coordinate, regionDistance, regionDistance)
-            
-            let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey:  NSValue(mkCoordinateSpan: regionSpan.span), MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving] as [String : Any]
-            
-            MKMapItem.openMaps(with: [destination], launchOptions: options)
-        }
-    }
+//    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+//        
+//        if let anno = view.annotation as? FootyGameAnnotation {
+//            
+//            var place: MKPlacemark!
+//            if #available(iOS 10.0, *) {
+//                place = MKPlacemark(coordinate: anno.coordinate)
+//            } else {
+//                place = MKPlacemark(coordinate: anno.coordinate, addressDictionary: nil)
+//            }
+//            let destination = MKMapItem(placemark: place)
+//            destination.name = "Game Sighting"
+//            let regionDistance: CLLocationDistance = 10000
+//            let regionSpan = MKCoordinateRegionMakeWithDistance(anno.coordinate, regionDistance, regionDistance)
+//            
+//            let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey:  NSValue(mkCoordinateSpan: regionSpan.span), MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving] as [String : Any]
+//            
+//            MKMapItem.openMaps(with: [destination], launchOptions: options)
+//        }
+//    }
     
     func userDidTapPokemon(data: Int) {
         let loc = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)

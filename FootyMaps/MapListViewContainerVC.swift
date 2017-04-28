@@ -19,6 +19,8 @@ import XLPagerTabStrip
 
 class MapListViewContainerVC: ButtonBarPagerTabStripViewController {
     
+    var profileDetailVC: ProfileDetailVC!
+    
     let purpleInspireColor = UIColor(red: 0.13, green: 0.03, blue: 0.25, alpha: 1.0)
     
     override func viewDidLoad() {
@@ -67,14 +69,13 @@ class MapListViewContainerVC: ButtonBarPagerTabStripViewController {
             
             connection.add(graphRequest, completionHandler: { (connection, result, error) -> Void in
                 
-                //let data = result as! [String: Any]
-                //USERNAME = (data["name"] as? String)!
+                let data = result as! [String: Any]
+                USERNAME = (data["name"] as? String)!
                 //print("BEN: Username is --- \(USERNAME)")
                 //let facebookId = data["id"] as? String
-                // Potential use for Profile pic showing
                 //let url = URL(string: "https://graph.facebook.com/"+facebookId!+"/picture?type=large&return_ssl_resources=1")
-                //self.profileImg.image = UIImage(data: NSData(contentsOf: url! as URL)! as Data)
-                //PROFILE_PICTURE = self.profileImg.image
+                //self.profileDetailVC.profileImg.image = UIImage(data: NSData(contentsOf: url! as URL)! as Data)
+                //PROFILE_PICTURE = self.profileDetailVC.profileImg.image
             })
             connection.start()
             
