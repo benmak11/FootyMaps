@@ -418,6 +418,12 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="add_feeling_btn" id="x89-cS-55V"/>
+                    <connections>
+                        <outlet property="ageLbl" destination="QLF-iA-Ec9" id="69y-Pd-nRY"/>
+                        <outlet property="favFootballerLbl" destination="B3I-af-opH" id="hl8-OM-eiv"/>
+                        <outlet property="numOfColleagues" destination="D2r-YL-NJI" id="lmb-jy-ufd"/>
+                        <outlet property="realNameFB" destination="eyi-bz-wSL" id="71K-H8-wvW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KEh-f2-tZ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -470,6 +476,9 @@
                                         <state key="normal" title="Save">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="submitCredentials:" destination="ouo-Sz-GEi" eventType="touchUpInside" id="fQB-Hs-SEw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1529411765" green="0.66274509800000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -494,7 +503,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Birthdate" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfI-na-Lzq" customClass="FancyTextField" customModule="FootyMaps" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfI-na-Lzq" customClass="FancyTextField" customModule="FootyMaps" customModuleProvider="target">
                                 <rect key="frame" x="16" y="222" width="270" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="270" id="c1c-Tp-dJh"/>
@@ -558,6 +567,13 @@
                             <constraint firstItem="Xwg-Nc-eQS" firstAttribute="top" secondItem="kyn-aI-QE2" secondAttribute="bottom" constant="10" id="vgL-EI-zFf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ageTextField" destination="pfI-na-Lzq" id="1Td-lx-vWx"/>
+                        <outlet property="email" destination="Xwg-Nc-eQS" id="WeY-Ws-1hA"/>
+                        <outlet property="favoriteFootballerTextField" destination="RVG-fg-KSO" id="TQb-cS-QR8"/>
+                        <outlet property="profileImg" destination="16t-de-VfS" id="ZMI-Yc-6y7"/>
+                        <outlet property="usernameTextField" destination="1Og-Ie-LSa" id="y0d-Rb-nL2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UwJ-aM-q2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

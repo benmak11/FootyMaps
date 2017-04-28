@@ -12,8 +12,26 @@ import SwiftKeychainWrapper
 
 class ProfileVC: UIViewController {
 
+    @IBOutlet weak var realNameFB: UILabel!
+    @IBOutlet weak var ageLbl: UILabel!
+    @IBOutlet weak var favFootballerLbl: UILabel!
+    @IBOutlet weak var numOfColleagues: UILabel!
+    
+    var profileDetails: Profile!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureProfileVC()
+    }
+    
+    func configureProfileVC(){
+        
+        self.realNameFB.text = profileDetails.username
+        self.ageLbl.text = "\(profileDetails.age)"
+        self.favFootballerLbl.text = profileDetails.favFootballer
+        
+        // Need to set the colleagues the user has
     }
 
     @IBAction func signOutButtonPushed(_ sender: Any) {
