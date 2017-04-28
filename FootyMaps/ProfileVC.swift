@@ -19,6 +19,8 @@ class ProfileVC: UIViewController {
     
     var profileDetails: Profile!
     
+    private var ref: FIRDatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,10 +28,12 @@ class ProfileVC: UIViewController {
     }
     
     func configureProfileVC(){
-        
-        self.realNameFB.text = profileDetails.username
-        self.ageLbl.text = "\(profileDetails.age)"
-        self.favFootballerLbl.text = profileDetails.favFootballer
+        print("BEN: --- \(USERNAME))")
+//        print("BEN: --- \(profileDetails.age)")
+//        print("BEN: --- \(profileDetails.favFootballer)")
+        self.realNameFB.text = USERNAME//profileDetails?.username
+        self.ageLbl.text = "\(String(describing: profileDetails?.age))"
+        self.favFootballerLbl.text = profileDetails?.favFootballer
         
         // Need to set the colleagues the user has
     }
