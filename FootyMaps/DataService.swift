@@ -22,9 +22,8 @@ class DataService{
     
     // MARK: DB References
     private var _REF_BASE = DB_BASE
-    private var _REF_FEED = DB_BASE.child("feeds")
+    private var _REF_GAME_FEED = DB_BASE.child("games")
     private var _REF_USERS = DB_BASE.child("users")
-    private var _REF_USERS_IN_VICINITY = DB_BASE.child("users_in_vicinity")
     
     // MARK: Geofire instances to be used and marked in Database
     
@@ -35,8 +34,8 @@ class DataService{
         return _REF_BASE
     }
     
-    var REF_FEED: FIRDatabaseReference {
-        return _REF_FEED
+    var REF_GAME_FEED: FIRDatabaseReference {
+        return _REF_GAME_FEED
     }
     
     var REF_USERS: FIRDatabaseReference {

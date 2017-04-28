@@ -11,10 +11,7 @@ import MapKit
 
 class FootyGameAnnotation: NSObject, MKAnnotation {
     var coordinate = CLLocationCoordinate2D()
-    //var location: String!
-    //var duration: Int
     var gameId: Int
-    //var title: String?
     
     init(coordinate: CLLocationCoordinate2D, gameId: Int){
         self.coordinate = coordinate
