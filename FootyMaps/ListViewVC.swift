@@ -37,7 +37,7 @@ class ListViewVC: UIViewController, IndicatorInfoProvider, UITableViewDelegate, 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        return listViewTableView.dequeueReusableCell(withIdentifier: "ListViewCell") as! ListViewCell
     }
     
     

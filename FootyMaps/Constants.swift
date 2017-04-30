@@ -12,6 +12,4 @@ let SHADOW_GRAY: CGFloat = 120.0/255.0
 
 let KEY_UID = "uid"
 var USERNAME = ""
-var playerAge = ""
-var favoriteFootballer = ""
 var PROFILE_PICTURE: UIImage?

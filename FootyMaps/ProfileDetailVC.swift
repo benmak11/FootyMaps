@@ -23,6 +23,8 @@ class ProfileDetailVC: UIViewController {
         super.viewDidLoad()
         
         self.updateUI()
+        
+        self.profileImg.image = PROFILE_PICTURE
     }
     
     func setup(){

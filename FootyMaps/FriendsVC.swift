@@ -32,7 +32,7 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        return footballersTableView.dequeueReusableCell(withIdentifier: "FootballersCell") as! FootballersCell
     }
 
 }
