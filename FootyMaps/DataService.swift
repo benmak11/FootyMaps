@@ -24,6 +24,7 @@ class DataService{
     private var _REF_BASE = DB_BASE
     private var _REF_GAME_FEED = DB_BASE.child("games")
     private var _REF_USERS = DB_BASE.child("users")
+    private var _REF_USERS_LOCATION = DB_BASE.child("users_locations")
     
     // MARK: Geofire instances to be used and marked in Database
     
@@ -42,6 +43,10 @@ class DataService{
         return _REF_USERS
     }
     
+    var REF_USERS_LOCATION: FIRDatabaseReference {
+        return _REF_USERS_LOCATION
+    }
+    
     var REF_USER_CURRENT: FIRDatabaseReference{
         let uid = KeychainWrapper.standard.string(forKey: KEY_UID)
         let user = REF_USERS.child(uid!)
@@ -50,5 +55,9 @@ class DataService{
     
     func createFirebaseDBUser(uid: String, userData: Dictionary<String, String>) {
         REF_USERS.child(uid).updateChildValues(userData)
+    }
+    
+    func addUserLocation(uid: String, userLocation: Dictionary<String, Any>){
+        REF_USERS_LOCATION.child(uid).updateChildValues(userLocation)
     }
 }

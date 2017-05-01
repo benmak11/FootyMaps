@@ -2,4 +2,54 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FootyMaps/FriendsVC.swift"
+            timestampString = "515353444.444454"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "updateUserLocation()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FootyMaps.FriendsVC.updateUserLocation () -&gt; ()"
+                  moduleName = "FootyMaps"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/benmakusha/Documents/XcodeProjects/iOS10/FootyMaps/FootyMaps/FriendsVC.swift"
+                  timestampString = "515356105.51469"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "721">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FootyMaps.FriendsVC.(updateUserLocation () -&gt; ()).(closure #1)"
+                  moduleName = "FootyMaps"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/benmakusha/Documents/XcodeProjects/iOS10/FootyMaps/FootyMaps/FriendsVC.swift"
+                  timestampString = "515356105.517212"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "15">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

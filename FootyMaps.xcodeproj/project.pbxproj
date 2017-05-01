@@ -16,6 +16,7 @@
 		3561CDEA1EA9A20F005A213C /* CustButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3561CDE91EA9A20F005A213C /* CustButton.swift */; };
 		35939B4C1EB2F11000513A64 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35939B4B1EB2F11000513A64 /* Profile.swift */; };
 		35D4BBB01EB2149C003D85F1 /* MessagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4BBAF1EB2149C003D85F1 /* MessagesVC.swift */; };
+		35F3AFB21EB797D800E9246F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F3AFB11EB797D800E9246F /* Location.swift */; };
 		46F9D0F25941070D199F9717 /* Pods_FootyMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F135A5477F3FF4DEDC29A734 /* Pods_FootyMaps.framework */; };
 		6726B94D1E94B43F0024F134 /* MapViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6726B94C1E94B43F0024F134 /* MapViewVC.swift */; };
 		6726B94F1E94B44F0024F134 /* ListViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6726B94E1E94B44F0024F134 /* ListViewVC.swift */; };
@@ -52,6 +53,7 @@
 		3561CDE91EA9A20F005A213C /* CustButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustButton.swift; sourceTree = "<group>"; };
 		35939B4B1EB2F11000513A64 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		35D4BBAF1EB2149C003D85F1 /* MessagesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesVC.swift; sourceTree = "<group>"; };
+		35F3AFB11EB797D800E9246F /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		6726B94C1E94B43F0024F134 /* MapViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewVC.swift; sourceTree = "<group>"; };
 		6726B94E1E94B44F0024F134 /* ListViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewVC.swift; sourceTree = "<group>"; };
 		672C4BE91E94B8D400053D94 /* GeoFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFire.h; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				672C4C011E94BBDD00053D94 /* FootyGameAnnotation.swift */,
 				672C4C031E94C55D00053D94 /* FootyGame.swift */,
 				35939B4B1EB2F11000513A64 /* Profile.swift */,
+				35F3AFB11EB797D800E9246F /* Location.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				6792A1991E9491960076B116 /* CustomCircleImageView.swift in Sources */,
 				6792A1771E948A5E0076B116 /* SignInVC.swift in Sources */,
 				6792A19E1E9491E20076B116 /* MapListViewContainerVC.swift in Sources */,
+				35F3AFB21EB797D800E9246F /* Location.swift in Sources */,
 				6792A1971E94917A0076B116 /* FancyTextView.swift in Sources */,
 				6792A1751E948A5E0076B116 /* AppDelegate.swift in Sources */,
 				672C4BFB1E94B8D400053D94 /* GFGeoHash.m in Sources */,
