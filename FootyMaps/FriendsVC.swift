@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, CLLocationManagerDelegate{
     @IBOutlet weak var footballersTableView: UITableView!
@@ -16,7 +17,9 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     let footballerLocatioManager = CLLocationManager()
     var currentLocation: CLLocation!
     
-    let geoFire = GeoFire(firebaseRef: DB_BASE.child("users_locations"))
+    var geoFire: GeoFire!
+    var geoFireRef: FIRDatabaseReference!
+    
     var nearByFootballers = [String]()
 
     override func viewDidLoad() {
@@ -28,7 +31,14 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         footballersSearchBar.delegate = self
         footballersSearchBar.returnKeyType = UIReturnKeyType.done
         
-        showUserLocation()
+        geoFireRef = DataService.ds.REF_USERS_LOCATION
+        geoFire = GeoFire(firebaseRef: geoFireRef)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        currentLocation = footballerLocatioManager.location
+        setUserCurrentLocation(location: currentLocation)
+        
         findNearbyUsers()
     }
     
@@ -44,25 +54,32 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         return footballersTableView.dequeueReusableCell(withIdentifier: "FootballersCell") as! FootballersCell
     }
     
-    func showUserLocation(){
-        self.currentLocation = self.footballerLocatioManager.location
-        Location.sharedInstance.latitube = self.currentLocation.coordinate.latitude
-        Location.sharedInstance.longitude = self.currentLocation.coordinate.longitude
-        let locLat = Location.sharedInstance.latitube
-        let locLong = Location.sharedInstance.longitude
+    
+    func setUserCurrentLocation(location: CLLocation){
         
-        let userLocation = ["location": ["latitude": locLat,
-                                         "longitude": locLong]]
-        let uid = FIRAuth.auth()!.currentUser!.uid
-        DataService.ds.addUserLocation(uid: uid, userLocation: userLocation)
-        print("Ben ---- Saved location")
+        if let myLocation = currentLocation {
+            
+            let userID = FIRAuth.auth()!.currentUser!.uid
+            geoFire!.setLocation(myLocation, forKey: userID) { (error) in
+                if (error != nil) {
+                    debugPrint("BEN: -- An error occured: \(String(describing: error))")
+                } else {
+                    print("BEN: -- Saved location successfully!")
+                }
+            }
+            
+        }
+        
+        //let uid = FIRAuth.auth()!.currentUser!.uid
+        //geoFire.setLocation(location, forKey: "\(uid)")
     }
     
     func findNearbyUsers() {
-
+        
+        currentLocation = footballerLocatioManager.location
         let circleQuery = geoFire?.query(at: currentLocation, withRadius: 5)
         
-        _ = circleQuery!.observe(.keyEntered, with: { (key, location) in
+        _ = circleQuery!.observe(GFEventType.keyEntered, with: { (key, location) in
             
             if !self.nearByFootballers.contains(key!) && key! != FIRAuth.auth()!.currentUser!.uid {
                 self.nearByFootballers.append(key!)
@@ -82,19 +99,27 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
             }
             
         })
+        
+    }
 
-    }
     
-    func updateUserLocation() {
-        let userID = FIRAuth.auth()!.currentUser!.uid
-        print("BEN --- Current user ID: \(userID)")
-        geoFire!.setLocation(currentLocation, forKey: userID){ (error) in
-            if(error != nil){
-                print("BEN: --- An error occured: \(String(describing: error))")
-            } else {
-                print("Ben ---- Saved location")
-            }
-        }
+    /*
+    *   Old way of writing user's location
+    *
+ 
+    func showUserLocation(){
+        self.currentLocation = self.footballerLocatioManager.location
+        Location.sharedInstance.latitube = self.currentLocation.coordinate.latitude
+        Location.sharedInstance.longitude = self.currentLocation.coordinate.longitude
+        let locLat = Location.sharedInstance.latitube
+        let locLong = Location.sharedInstance.longitude
+        
+        let userLocation = ["location": ["latitude": locLat,
+                                         "longitude": locLong]]
+        let uid = FIRAuth.auth()!.currentUser!.uid
+        DataService.ds.addUserLocation(uid: uid, userLocation: userLocation)
+        print("Ben ---- Saved location")
     }
+    */
 
 }
