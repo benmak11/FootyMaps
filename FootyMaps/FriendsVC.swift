@@ -27,9 +27,7 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         footballersSearchBar.delegate = self
         footballersSearchBar.returnKeyType = UIReturnKeyType.done
         
-        //showUserLocation()
-        updateUserLocation()
-
+        showUserLocation()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -45,26 +43,17 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     }
     
     func showUserLocation(){
-//        self.currentLocation = self.footballerLocatioManager.location
-//        Location.sharedInstance.latitube = self.currentLocation.coordinate.latitude
-//        Location.sharedInstance.longitude = self.currentLocation.coordinate.longitude
-//        let locLat = Location.sharedInstance.latitube
-//        let locLong = Location.sharedInstance.longitude
+        self.currentLocation = self.footballerLocatioManager.location
+        Location.sharedInstance.latitube = self.currentLocation.coordinate.latitude
+        Location.sharedInstance.longitude = self.currentLocation.coordinate.longitude
+        let locLat = Location.sharedInstance.latitube
+        let locLong = Location.sharedInstance.longitude
         
-//        let userLocation = ["location": ["latitude": locLat,
-//                                         "longitude": locLong]]
-//        DataService.ds.addUserLocation(uid: KEY_UID, userLocation: userLocation)
-        
-        
-//        geoFire!.setLocation(currentLocation, forKey: userUID!){ (error) in
-//            if(error != nil){
-//                print("BEN: --- An error occured: \(String(describing: error))")
-//            } else {
-//                print("Ben ---- Saved location")
-//            }
-//            
-//        }
-        
+        let userLocation = ["location": ["latitude": locLat,
+                                         "longitude": locLong]]
+        let uid = FIRAuth.auth()!.currentUser!.uid
+        DataService.ds.addUserLocation(uid: uid, userLocation: userLocation)
+        print("Ben ---- Saved location")
     }
     
     func updateUserLocation() {
