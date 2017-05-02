@@ -17,6 +17,7 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     var currentLocation: CLLocation!
     
     let geoFire = GeoFire(firebaseRef: DB_BASE.child("users_locations"))
+    var allKeys = [String:CLLocation]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,7 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         footballersSearchBar.returnKeyType = UIReturnKeyType.done
         
         showUserLocation()
+        findNearbyUsers()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -54,6 +56,15 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         let uid = FIRAuth.auth()!.currentUser!.uid
         DataService.ds.addUserLocation(uid: uid, userLocation: userLocation)
         print("Ben ---- Saved location")
+    }
+    
+    func findNearbyUsers() {
+
+        let circleQuery = geoFire?.query(at: currentLocation, withRadius: 5)
+        
+        _ = circleQuery?.observe(.keyEntered, with: { (key: String!, location: CLLocation!) in
+            print("Key '\(key)' entered the search area and is at location '\(self.currentLocation)'")
+        })
     }
     
     func updateUserLocation() {
