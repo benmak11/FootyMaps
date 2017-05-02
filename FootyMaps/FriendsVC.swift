@@ -17,7 +17,7 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     var currentLocation: CLLocation!
     
     let geoFire = GeoFire(firebaseRef: DB_BASE.child("users_locations"))
-    var allKeys = [String:CLLocation]()
+    var nearByFootballers = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,9 +62,27 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
 
         let circleQuery = geoFire?.query(at: currentLocation, withRadius: 5)
         
-        _ = circleQuery?.observe(.keyEntered, with: { (key: String!, location: CLLocation!) in
-            print("Key '\(key)' entered the search area and is at location '\(self.currentLocation)'")
+        _ = circleQuery!.observe(.keyEntered, with: { (key, location) in
+            
+            if !self.nearByFootballers.contains(key!) && key! != FIRAuth.auth()!.currentUser!.uid {
+                self.nearByFootballers.append(key!)
+            }
+            
         })
+        
+        //Execute this code once GeoFire completes the query!
+        circleQuery?.observeReady({
+            
+            for _ in self.nearByFootballers {
+                
+                DataService.ds.REF_USERS.observe(.value, with: { snapshot in
+                    let value = snapshot.value as? NSDictionary
+                    print("BEN: --- \(String(describing: value))")
+                })
+            }
+            
+        })
+
     }
     
     func updateUserLocation() {
