@@ -74,6 +74,11 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         //geoFire.setLocation(location, forKey: "\(uid)")
     }
     
+    /*
+    ** findNearByUsers function retrieves near by footballers within a range of 25 miles
+    **
+    ** @return nearByFootballers array containing user Ids of Footy Maps
+    */
     func findNearbyUsers() {
         
         currentLocation = footballerLocatioManager.location
@@ -86,10 +91,8 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
             }
             
         })
-        
         //Execute this code once GeoFire completes the query!
         circleQuery?.observeReady({
-            
             for _ in self.nearByFootballers {
                 
                 DataService.ds.REF_USERS.observe(.value, with: { snapshot in
@@ -97,7 +100,6 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
                     print("BEN: --- \(String(describing: value))")
                 })
             }
-            
         })
         
     }
