@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, CLLocationManagerDelegate{
     @IBOutlet weak var footballersTableView: UITableView!
@@ -16,7 +17,10 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     let footballerLocatioManager = CLLocationManager()
     var currentLocation: CLLocation!
     
-    let geoFire = GeoFire(firebaseRef: DB_BASE.child("users_locations"))
+    var geoFire: GeoFire!
+    var geoFireRef: FIRDatabaseReference!
+    
+    var nearByFootballers = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +31,15 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         footballersSearchBar.delegate = self
         footballersSearchBar.returnKeyType = UIReturnKeyType.done
         
-        showUserLocation()
+        geoFireRef = DataService.ds.REF_USERS_LOCATION
+        geoFire = GeoFire(firebaseRef: geoFireRef)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        currentLocation = footballerLocatioManager.location
+        setUserCurrentLocation(location: currentLocation)
+        
+        findNearbyUsers()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -42,6 +54,61 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         return footballersTableView.dequeueReusableCell(withIdentifier: "FootballersCell") as! FootballersCell
     }
     
+    
+    func setUserCurrentLocation(location: CLLocation){
+        
+        if let myLocation = currentLocation {
+            
+            let userID = FIRAuth.auth()!.currentUser!.uid
+            geoFire!.setLocation(myLocation, forKey: userID) { (error) in
+                if (error != nil) {
+                    debugPrint("BEN: -- An error occured: \(String(describing: error))")
+                } else {
+                    print("BEN: -- Saved location successfully!")
+                }
+            }
+            
+        }
+        
+        //let uid = FIRAuth.auth()!.currentUser!.uid
+        //geoFire.setLocation(location, forKey: "\(uid)")
+    }
+    
+    /*
+    ** findNearByUsers function retrieves near by footballers within a range of 25 miles
+    **
+    ** @return nearByFootballers array containing user Ids of Footy Maps
+    */
+    func findNearbyUsers() {
+        
+        currentLocation = footballerLocatioManager.location
+        let circleQuery = geoFire?.query(at: currentLocation, withRadius: 5)
+        
+        _ = circleQuery!.observe(GFEventType.keyEntered, with: { (key, location) in
+            
+            if !self.nearByFootballers.contains(key!) && key! != FIRAuth.auth()!.currentUser!.uid {
+                self.nearByFootballers.append(key!)
+            }
+            
+        })
+        //Execute this code once GeoFire completes the query!
+        circleQuery?.observeReady({
+            for _ in self.nearByFootballers {
+                
+                DataService.ds.REF_USERS.observe(.value, with: { snapshot in
+                    let value = snapshot.value as? NSDictionary
+                    print("BEN: --- \(String(describing: value))")
+                })
+            }
+        })
+        
+    }
+
+    
+    /*
+    *   Old way of writing user's location
+    *
+ 
     func showUserLocation(){
         self.currentLocation = self.footballerLocatioManager.location
         Location.sharedInstance.latitube = self.currentLocation.coordinate.latitude
@@ -55,17 +122,6 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         DataService.ds.addUserLocation(uid: uid, userLocation: userLocation)
         print("Ben ---- Saved location")
     }
-    
-    func updateUserLocation() {
-        let userID = FIRAuth.auth()!.currentUser!.uid
-        print("BEN --- Current user ID: \(userID)")
-        geoFire!.setLocation(currentLocation, forKey: userID){ (error) in
-            if(error != nil){
-                print("BEN: --- An error occured: \(String(describing: error))")
-            } else {
-                print("Ben ---- Saved location")
-            }
-        }
-    }
+    */
 
 }
