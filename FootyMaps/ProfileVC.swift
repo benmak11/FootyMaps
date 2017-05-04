@@ -18,6 +18,7 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var favFootballerLbl: UILabel!
     @IBOutlet weak var numOfColleagues: UILabel!
     @IBOutlet weak var FBProfilePicture: UIImageView!
+    @IBOutlet weak var faceBookNameLbl: UILabel!
     
     var profile = [Profile]()
     
@@ -49,7 +50,7 @@ class ProfileVC: UIViewController {
             }
         })
         
-        // Need to set the colleagues the user has
+        // MARK: Need to set the colleagues the user has here
     }
 
     @IBAction func signOutButtonPushed(_ sender: Any) {
@@ -75,6 +76,7 @@ class ProfileVC: UIViewController {
                 
                 let data = result as! [String: Any]
                 USERNAME = (data["name"] as? String)!
+                self.faceBookNameLbl.text = USERNAME
                 //print("BEN: Username is --- \(USERNAME)")
                 let facebookId = data["id"] as? String
                 let url = URL(string: "https://graph.facebook.com/"+facebookId!+"/picture?type=large&return_ssl_resources=1")

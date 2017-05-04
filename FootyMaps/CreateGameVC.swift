@@ -67,11 +67,9 @@ class CreateGameVC: UIViewController, CLLocationManagerDelegate {
             }
             
             if let place = place {
-                //self.nameLabel.text = place.name
                 self.placeTextField.text = place.formattedAddress?.components(separatedBy: ", ")
                     .joined(separator: "\n")
             } else {
-                //self.nameLabel.text = "No place selected"
                 self.placeTextField.text = ""
             }
         })

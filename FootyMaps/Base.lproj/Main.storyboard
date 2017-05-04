@@ -304,10 +304,10 @@
                                     <constraint firstAttribute="bottom" secondItem="RC0-rD-veD" secondAttribute="bottom" constant="20" id="ySc-PZ-4XP"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qBe-kn-Hnv">
-                                <rect key="frame" x="25" y="253" width="45" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qBe-kn-Hnv">
+                                <rect key="frame" x="36" y="254" width="70" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="YcC-0B-hN0"/>
+                                    <constraint firstAttribute="width" constant="70" id="YcC-0B-hN0"/>
                                     <constraint firstAttribute="height" constant="21" id="rN4-CP-oxj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
@@ -386,12 +386,22 @@
                                     <constraint firstAttribute="width" constant="80" id="lmM-Dn-p4I"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Real Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5SI-Tw-sFy">
+                                <rect key="frame" x="87" y="225" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="oL0-jp-w2C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.74117647058823533" green="0.74117647058823533" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="eyi-bz-wSL" firstAttribute="top" secondItem="qBe-kn-Hnv" secondAttribute="bottom" constant="8" symbolic="YES" id="0PU-Zw-Wnm"/>
+                            <constraint firstItem="eyi-bz-wSL" firstAttribute="top" secondItem="qBe-kn-Hnv" secondAttribute="bottom" constant="7" id="0PU-Zw-Wnm"/>
                             <constraint firstItem="eyi-bz-wSL" firstAttribute="baseline" secondItem="B3I-af-opH" secondAttribute="baseline" id="5EY-rC-uyR"/>
                             <constraint firstItem="dnm-5r-KR9" firstAttribute="centerX" secondItem="QLF-iA-Ec9" secondAttribute="centerX" id="5hh-X1-IJG"/>
+                            <constraint firstItem="5SI-Tw-sFy" firstAttribute="top" secondItem="yxx-mM-Nps" secondAttribute="bottom" constant="12" id="8wV-6k-KSE"/>
                             <constraint firstItem="yxx-mM-Nps" firstAttribute="centerX" secondItem="kCU-zG-ZHB" secondAttribute="centerX" id="AY2-fC-grg"/>
                             <constraint firstItem="Lvl-Nj-vSv" firstAttribute="top" secondItem="QLF-iA-Ec9" secondAttribute="bottom" constant="44" id="CM0-9S-2qu"/>
                             <constraint firstItem="dnm-5r-KR9" firstAttribute="baseline" secondItem="de5-aP-4cA" secondAttribute="baseline" id="CZK-jz-ddN"/>
@@ -407,11 +417,13 @@
                             <constraint firstItem="D2r-YL-NJI" firstAttribute="top" secondItem="Lvl-Nj-vSv" secondAttribute="bottom" constant="19" id="Q92-93-ve1"/>
                             <constraint firstItem="kCU-zG-ZHB" firstAttribute="top" secondItem="fok-V0-uai" secondAttribute="top" id="XCI-Zc-ctc"/>
                             <constraint firstAttribute="trailing" secondItem="kCU-zG-ZHB" secondAttribute="trailing" id="avA-ks-fAh"/>
+                            <constraint firstItem="qBe-kn-Hnv" firstAttribute="top" secondItem="5SI-Tw-sFy" secondAttribute="bottom" constant="8" symbolic="YES" id="cQA-x2-nd6"/>
                             <constraint firstItem="dnm-5r-KR9" firstAttribute="top" secondItem="yxx-mM-Nps" secondAttribute="bottom" constant="41" id="eTE-ac-mDC"/>
                             <constraint firstItem="dnm-5r-KR9" firstAttribute="firstBaseline" secondItem="de5-aP-4cA" secondAttribute="firstBaseline" id="elS-i0-4NW"/>
                             <constraint firstItem="kCU-zG-ZHB" firstAttribute="leading" secondItem="fok-V0-uai" secondAttribute="leading" id="f0t-5V-uQQ"/>
                             <constraint firstItem="dWO-2a-DMR" firstAttribute="top" secondItem="D2r-YL-NJI" secondAttribute="bottom" constant="210" id="faV-U9-Yv7"/>
-                            <constraint firstItem="dnm-5r-KR9" firstAttribute="leading" secondItem="qBe-kn-Hnv" secondAttribute="trailing" constant="82" id="gWq-C0-7qi"/>
+                            <constraint firstItem="dnm-5r-KR9" firstAttribute="leading" secondItem="qBe-kn-Hnv" secondAttribute="trailing" constant="46" id="gWq-C0-7qi"/>
+                            <constraint firstItem="5SI-Tw-sFy" firstAttribute="centerX" secondItem="yxx-mM-Nps" secondAttribute="centerX" id="qdm-ui-q6M"/>
                             <constraint firstItem="B3I-af-opH" firstAttribute="top" secondItem="de5-aP-4cA" secondAttribute="bottom" constant="7" id="siy-kH-ikZ"/>
                         </constraints>
                     </view>
@@ -419,6 +431,7 @@
                     <connections>
                         <outlet property="FBProfilePicture" destination="yxx-mM-Nps" id="xPo-q6-3Rf"/>
                         <outlet property="ageLbl" destination="QLF-iA-Ec9" id="69y-Pd-nRY"/>
+                        <outlet property="faceBookNameLbl" destination="5SI-Tw-sFy" id="6Xo-dA-rQp"/>
                         <outlet property="favFootballerLbl" destination="B3I-af-opH" id="hl8-OM-eiv"/>
                         <outlet property="numOfColleagues" destination="D2r-YL-NJI" id="lmb-jy-ufd"/>
                         <outlet property="realNameFB" destination="eyi-bz-wSL" id="71K-H8-wvW"/>
