@@ -70,8 +70,6 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
             
         }
         
-        //let uid = FIRAuth.auth()!.currentUser!.uid
-        //geoFire.setLocation(location, forKey: "\(uid)")
     }
     
     /*

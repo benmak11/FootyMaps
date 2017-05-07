@@ -26,8 +26,6 @@ class DataService{
     private var _REF_USERS = DB_BASE.child("users")
     private var _REF_USERS_LOCATION = DB_BASE.child("users_locations")
     
-    // MARK: Geofire instances to be used and marked in Database
-    
     // MARK: Storage References
     // place storage references here if you need them
     

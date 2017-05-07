@@ -27,10 +27,6 @@ class ProfileDetailVC: UIViewController {
         self.profileImg.image = PROFILE_PICTURE
     }
     
-    func setup(){
-        //setup the user's image from facebook here
-    }
-    
     func updateUI(){
         
         DataService.ds.REF_USER_CURRENT.observe(.value, with: { (snapshot) in
