@@ -19,4 +19,5 @@ target 'FootyMaps' do
   pod 'GooglePlaces'
   pod 'GooglePlacePicker'
   pod 'GoogleMaps'
+  pod 'GeoFire', :git => 'https://github.com/firebase/geofire-objc.git', :branch => 'master'
 end

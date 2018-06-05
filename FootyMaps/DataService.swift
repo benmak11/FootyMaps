@@ -11,9 +11,9 @@ import Firebase
 import FirebaseDatabase
 import SwiftKeychainWrapper
 
-let DB_BASE = FIRDatabase.database().reference()
-let STORAGE_BASE = FIRStorage.storage().reference()
-let GeoFire_REF = FIRDatabase.database().reference()
+let DB_BASE = Database.database().reference()
+let STORAGE_BASE = Storage.storage().reference()
+let GeoFire_REF = Database.database().reference()
 
 class DataService{
     
@@ -29,23 +29,23 @@ class DataService{
     // MARK: Storage References
     // place storage references here if you need them
     
-    var REF_BASE: FIRDatabaseReference {
+    var REF_BASE: DatabaseReference {
         return _REF_BASE
     }
     
-    var REF_GAME_FEED: FIRDatabaseReference {
+    var REF_GAME_FEED: DatabaseReference {
         return _REF_GAME_FEED
     }
     
-    var REF_USERS: FIRDatabaseReference {
+    var REF_USERS: DatabaseReference {
         return _REF_USERS
     }
     
-    var REF_USERS_LOCATION: FIRDatabaseReference {
+    var REF_USERS_LOCATION: DatabaseReference {
         return _REF_USERS_LOCATION
     }
     
-    var REF_USER_CURRENT: FIRDatabaseReference{
+    var REF_USER_CURRENT: DatabaseReference{
         let uid = KeychainWrapper.standard.string(forKey: KEY_UID)
         let user = REF_USERS.child(uid!)
         return user

@@ -15,7 +15,7 @@ class FootyGame {
     private var _startTime: String!
     private var _postKey: String!
     private var _postedDate: String!
-    private var _postRef: FIRDatabaseReference!
+    private var _postRef: DatabaseReference!
     
     var location: String {
         return _location

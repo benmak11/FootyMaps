@@ -83,7 +83,7 @@ class CreateGameVC: UIViewController, CLLocationManagerDelegate {
         datePickerView.addTarget(self, action: #selector(datePickerValueChanged), for: UIControlEvents.valueChanged)
     }
     
-    func datePickerValueChanged(sender: UIDatePicker) {
+    @objc func datePickerValueChanged(sender: UIDatePicker) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = DateFormatter.Style.none
         dateFormatter.timeStyle = DateFormatter.Style.short
@@ -96,7 +96,7 @@ class CreateGameVC: UIViewController, CLLocationManagerDelegate {
         gameDurationLbl.text = "\(currentValue) m"
     }
     
-    func dismissPicker() {
+    @objc func dismissPicker() {
         view.endEditing(true)
         
     }

@@ -56,7 +56,7 @@ class ProfileDetailVC: UIViewController {
             "username": usernameTextField.text!,
             "favoriteFootballer": favoriteFootballerTextField.text!,
             "email": email.text!,
-            "postedDate": FIRServerValue.timestamp()
+            "postedDate": ServerValue.timestamp()
         ]
         print("BEN: postID is \(DataService.ds.REF_USER_CURRENT)")
         let firebaseSetUserCreds = DataService.ds.REF_USER_CURRENT

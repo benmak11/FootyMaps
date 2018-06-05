@@ -22,7 +22,7 @@ class ProfileVC: UIViewController {
     
     var profile = [Profile]()
     
-    private var ref: FIRDatabaseReference!
+    private var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +56,7 @@ class ProfileVC: UIViewController {
     @IBAction func signOutButtonPushed(_ sender: Any) {
         let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         print("BEN: removed id from keychain \(keychainResult)")
-        try! FIRAuth.auth()?.signOut()
+        try! Auth.auth().signOut()
         performSegue(withIdentifier: "goToSignIn", sender: nil)
     }
     

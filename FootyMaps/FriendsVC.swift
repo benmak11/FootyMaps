@@ -18,7 +18,7 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     var currentLocation: CLLocation!
     
     var geoFire: GeoFire!
-    var geoFireRef: FIRDatabaseReference!
+    var geoFireRef: DatabaseReference!
     
     var nearByFootballers = [String]()
 
@@ -59,7 +59,7 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         
         if let myLocation = currentLocation {
             
-            let userID = FIRAuth.auth()!.currentUser!.uid
+            let userID = Auth.auth().currentUser!.uid
             geoFire!.setLocation(myLocation, forKey: userID) { (error) in
                 if (error != nil) {
                     debugPrint("BEN: -- An error occured: \(String(describing: error))")
@@ -84,7 +84,7 @@ class FriendsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         
         _ = circleQuery!.observe(GFEventType.keyEntered, with: { (key, location) in
             
-            if !self.nearByFootballers.contains(key!) && key! != FIRAuth.auth()!.currentUser!.uid {
+            if !self.nearByFootballers.contains(key!) && key! != Auth.auth().currentUser!.uid {
                 self.nearByFootballers.append(key!)
             }
             

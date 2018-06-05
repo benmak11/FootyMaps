@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09D4746B7871F6F0F3C23B44 /* Pods_FootyMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F687EE5E837AE60CE450043 /* Pods_FootyMaps.framework */; };
 		350F24411EAEDDEE00FEEF59 /* CreateGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350F24401EAEDDEE00FEEF59 /* CreateGameVC.swift */; };
 		3516B4951EA9B06C00407DD1 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3516B4941EA9B06C00407DD1 /* ListViewCell.swift */; };
 		3516B4971EA9B09100407DD1 /* FootballersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3516B4961EA9B09100407DD1 /* FootballersCell.swift */; };
@@ -17,7 +18,6 @@
 		35939B4C1EB2F11000513A64 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35939B4B1EB2F11000513A64 /* Profile.swift */; };
 		35D4BBB01EB2149C003D85F1 /* MessagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D4BBAF1EB2149C003D85F1 /* MessagesVC.swift */; };
 		35F3AFB21EB797D800E9246F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F3AFB11EB797D800E9246F /* Location.swift */; };
-		46F9D0F25941070D199F9717 /* Pods_FootyMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F135A5477F3FF4DEDC29A734 /* Pods_FootyMaps.framework */; };
 		6726B94D1E94B43F0024F134 /* MapViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6726B94C1E94B43F0024F134 /* MapViewVC.swift */; };
 		6726B94F1E94B44F0024F134 /* ListViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6726B94E1E94B44F0024F134 /* ListViewVC.swift */; };
 		672C4BF91E94B8D400053D94 /* GeoFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 672C4BF01E94B8D400053D94 /* GeoFire.m */; };
@@ -44,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F687EE5E837AE60CE450043 /* Pods_FootyMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootyMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		350F24401EAEDDEE00FEEF59 /* CreateGameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGameVC.swift; sourceTree = "<group>"; };
 		3516B4941EA9B06C00407DD1 /* ListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
 		3516B4961EA9B09100407DD1 /* FootballersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FootballersCell.swift; sourceTree = "<group>"; };
@@ -90,9 +91,8 @@
 		6792A19A1E9491A70076B116 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		6792A19D1E9491E20076B116 /* MapListViewContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapListViewContainerVC.swift; sourceTree = "<group>"; };
 		6792A19F1E9493990076B116 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		7BB16D378332B725A373A911 /* Pods-FootyMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootyMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootyMaps/Pods-FootyMaps.debug.xcconfig"; sourceTree = "<group>"; };
-		A3FADAA6EEA5478003029191 /* Pods-FootyMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootyMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-FootyMaps/Pods-FootyMaps.release.xcconfig"; sourceTree = "<group>"; };
-		F135A5477F3FF4DEDC29A734 /* Pods_FootyMaps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootyMaps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77ED93FA55BFC743A956A000 /* Pods-FootyMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootyMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootyMaps/Pods-FootyMaps.debug.xcconfig"; sourceTree = "<group>"; };
+		D6D2084951DA5BEABF8D1F80 /* Pods-FootyMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootyMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-FootyMaps/Pods-FootyMaps.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,19 +100,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46F9D0F25941070D199F9717 /* Pods_FootyMaps.framework in Frameworks */,
+				09D4746B7871F6F0F3C23B44 /* Pods_FootyMaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		368BBFADB25AF3F721773AD1 /* Frameworks */ = {
+		261158768B7BE1D66F767A86 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F135A5477F3FF4DEDC29A734 /* Pods_FootyMaps.framework */,
+				77ED93FA55BFC743A956A000 /* Pods-FootyMaps.debug.xcconfig */,
+				D6D2084951DA5BEABF8D1F80 /* Pods-FootyMaps.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		672C4BE71E94B8D400053D94 /* GeoFire */ = {
@@ -158,8 +159,8 @@
 			children = (
 				6792A1731E948A5E0076B116 /* FootyMaps */,
 				6792A1721E948A5E0076B116 /* Products */,
-				FAEF7E596988D401E8AEDC5B /* Pods */,
-				368BBFADB25AF3F721773AD1 /* Frameworks */,
+				261158768B7BE1D66F767A86 /* Pods */,
+				72D00850FB3537E871CB2975 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -281,13 +282,12 @@
 			name = MapListVCs;
 			sourceTree = "<group>";
 		};
-		FAEF7E596988D401E8AEDC5B /* Pods */ = {
+		72D00850FB3537E871CB2975 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7BB16D378332B725A373A911 /* Pods-FootyMaps.debug.xcconfig */,
-				A3FADAA6EEA5478003029191 /* Pods-FootyMaps.release.xcconfig */,
+				2F687EE5E837AE60CE450043 /* Pods_FootyMaps.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,12 +297,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6792A1831E948A5E0076B116 /* Build configuration list for PBXNativeTarget "FootyMaps" */;
 			buildPhases = (
-				FFF4D489DE29B41F90A00F4A /* [CP] Check Pods Manifest.lock */,
+				92B1D4E5B936620E43C2DDF2 /* [CP] Check Pods Manifest.lock */,
 				6792A16D1E948A5E0076B116 /* Sources */,
 				6792A16E1E948A5E0076B116 /* Frameworks */,
 				6792A16F1E948A5E0076B116 /* Resources */,
-				552B10C434B9CC371C3549D4 /* [CP] Embed Pods Frameworks */,
-				5B47A83AB7D619846D43CF84 /* [CP] Copy Pods Resources */,
+				F839D5DCFD5C672CB6FB40D9 /* [CP] Embed Pods Frameworks */,
+				58F5C1C115A52023AA1C7BF0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -320,12 +320,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Ben Makusha";
 				TargetAttributes = {
 					6792A1701E948A5E0076B116 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = X8E58H8HK5;
+						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -363,49 +364,80 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		552B10C434B9CC371C3549D4 /* [CP] Embed Pods Frameworks */ = {
+		58F5C1C115A52023AA1C7BF0 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FootyMaps/Pods-FootyMaps-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5B47A83AB7D619846D43CF84 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FootyMaps/Pods-FootyMaps-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FootyMaps/Pods-FootyMaps-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FFF4D489DE29B41F90A00F4A /* [CP] Check Pods Manifest.lock */ = {
+		92B1D4E5B936620E43C2DDF2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FootyMaps-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F839D5DCFD5C672CB6FB40D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FootyMaps/Pods-FootyMaps-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FootyMaps/Pods-FootyMaps-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -479,15 +511,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -529,15 +569,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -564,7 +612,7 @@
 		};
 		6792A1841E948A5E0076B116 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7BB16D378332B725A373A911 /* Pods-FootyMaps.debug.xcconfig */;
+			baseConfigurationReference = 77ED93FA55BFC743A956A000 /* Pods-FootyMaps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X8E58H8HK5;
@@ -574,13 +622,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.benmakusha.FootyMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FootyMaps/FootyMaps-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		6792A1851E948A5E0076B116 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3FADAA6EEA5478003029191 /* Pods-FootyMaps.release.xcconfig */;
+			baseConfigurationReference = D6D2084951DA5BEABF8D1F80 /* Pods-FootyMaps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X8E58H8HK5;
@@ -590,7 +639,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.benmakusha.FootyMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FootyMaps/FootyMaps-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

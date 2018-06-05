@@ -45,15 +45,15 @@ class SignInVC: UIViewController {
                 print("BEN: User cancelled Facebook authentication")
             } else {
                 print("BEN: Successfully authenticated with Facebook")
-                let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+                let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 self.firebaseAuth(credential)
             }
         }
     }
     
     // MARK: Firebase authentication with Facebook
-    func firebaseAuth(_ credential: FIRAuthCredential) {
-        FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
+    func firebaseAuth(_ credential: AuthCredential) {
+        Auth.auth().signIn(with: credential, completion: { (user, error) in
             if error != nil {
                 print("BEN: Unable to authenticate with Firebase using Facebook - \(String(describing: error))")
             } else {

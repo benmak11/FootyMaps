@@ -29,7 +29,7 @@ class MapViewVC: UIViewController, IndicatorInfoProvider, MKMapViewDelegate, CLL
     
     // MARK: Geofire object
     var geoFire: GeoFire!
-    var geoFireRef: FIRDatabaseReference!
+    var geoFireRef: DatabaseReference!
     
     var mapHasCenteredOnce = false;
     
@@ -42,7 +42,7 @@ class MapViewVC: UIViewController, IndicatorInfoProvider, MKMapViewDelegate, CLL
         mapView.userTrackingMode = MKUserTrackingMode.follow
         mapView.zoomToUserLocation()
         
-        geoFireRef = FIRDatabase.database().reference()
+        geoFireRef = Database.database().reference()
         geoFire = GeoFire(firebaseRef: geoFireRef)                  //Initialized GeoFire
         
     }

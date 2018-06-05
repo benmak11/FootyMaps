@@ -16,7 +16,7 @@ class Profile {
     private var _emailAddress: String!
     private var _postKey: String!
     private var _postedDate: String!
-    private var _updateCredentials: FIRDatabaseReference!
+    private var _updateCredentials: DatabaseReference!
     
     var username: String {
         return _username
