@@ -53,14 +53,15 @@ class SignInVC: UIViewController {
     
     // MARK: Firebase authentication with Facebook
     func firebaseAuth(_ credential: AuthCredential) {
-        Auth.auth().signIn(with: credential, completion: { (user, error) in
+        Auth.auth().signInAndRetrieveData(with: credential, completion: { (user, error) in
             if error != nil {
                 print("BEN: Unable to authenticate with Firebase using Facebook - \(String(describing: error))")
             } else {
                 print("BEN: Successfully authenticated with Firebase using Facebook")
                 if let user = user {
+                    var userId = user.user.uid
                     let userData = ["provider": credential.provider]
-                    self.completeSignIn(id: user.uid, userData: userData)
+                    self.completeSignIn(id: userId, userData: userData)
                 }
             }
         })
